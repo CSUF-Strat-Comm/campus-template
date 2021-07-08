@@ -5,54 +5,75 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  min-height: 300px;
-  &.full-height {
-    height: 100vh;
-  }
+  padding: 2rem;
 
   .banner-content {
-    position: absolute;
     width: $small_wrap_width;
+    position: relative;
     z-index: 2;
-    left: 50px;
-    top: 50px;
 
-    &.top-left {
-
+    &.position {
+      position: absolute;
+      &-top-left {
+        @extend .position;
+        top: 2rem;
+        left: 2rem;
+      }
+  
+      &-center-left {
+        @extend .position;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 2rem;
+      }
+  
+      &-bottom-left {
+        @extend .position;
+        bottom: 2rem;
+        left: 2rem;
+      }
+  
+      &-top-right {
+        @extend .position;
+        top: 2rem;
+        right: 2rem;
+      }
+  
+      &-center-right {
+        @extend .position;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 2rem;
+      }
+  
+      &-bottom-right {
+        @extend .position;
+        bottom: 2rem;
+        right: 2rem;
+      }
+  
+      &-top-center {
+        @extend .position;
+        transform: translateX(-50%);
+        top: 2rem;
+        left: 50%;
+      }
+  
+      &-center {
+        @extend .position;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+      }
+  
+      &-bottom-center {
+        @extend .position;
+        @extend .position;
+        transform: translateX(-50%);
+        bottom: 2rem;
+        left: 50%;
+      }
     }
-
-    &.middle-left {
-
-    }
-
-    &.bottom-left {
-
-    }
-
-    &.top-right {
-
-    }
-
-    &.middle-right {
-
-    }
-
-    &.bottom-right {
-
-    }
-
-    &.top-center {
-
-    }
-
-    &.center {
-
-    }
-
-    &.bottom-center {
-
-    }
-
 
   }
 
