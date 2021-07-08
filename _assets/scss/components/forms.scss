@@ -1,0 +1,67 @@
+form {
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="time"],
+input[type="url"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="tel"],
+input[type="password"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;
+  font-family: $body_font;
+  border: 1px solid #c7c7c7;
+  border-radius: 2px;
+  font-size: $text-size-md;
+  margin: 0;
+  padding: .5rem;
+  // width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #f7f7f7;
+  color: $text;
+  font-size: $text-size-md;
+  &:focus {
+    background-color: #EFEDE6;
+  }
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+input[type="reset"] {
+  @extend .button;
+  font-size: $text-size-md;
+  font-family: $body_font;
+}
+
+legend {
+  margin-bottom: .5rem;
+  font-size: $text-size-sm;
+}
+
+fieldset {
+  margin-bottom: 1.5em;
+}
+
+label {
+  display: block;
+  margin-bottom: .5rem;
+  font-size: $text-size-sm;
+  line-height: 1em;
+}

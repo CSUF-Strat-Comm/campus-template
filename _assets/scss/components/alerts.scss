@@ -1,0 +1,47 @@
+.alert {
+  display: block;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background: $info;
+  border: 1px solid #ccc;
+  border-left-width: 5px;
+  &-error {
+		@extend .alert;
+    background: lighten($error, 60%);
+    border-color: lighten($error, 45%);
+    border-left-color: #b81b1b;
+    color: $error;
+	}
+  &-success {
+		@extend .alert;
+    background: lighten($success, 65%);
+    border-color: lighten($success, 45%);
+    border-left-color: #2e6824;
+    color: $success;
+	}
+  &-warning {
+		@extend .alert;
+    background: lighten($warning, 55%);
+    border-color: lighten($warning, 45%);
+    border-left-color: #FF6800;
+    color: darken($warning, 15%);
+	}
+  &-notice {
+		@extend .alert;
+    background: $pale_blue;
+    border-color: $light_blue;
+    border-left-color: $medium_blue;
+    color: $dark_medium_blue;
+	}
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  h1, h2, h3,
+  h4, h5, h6 {
+    font-size: $text-size-lg;
+    margin-bottom: .5rem;
+  }
+
+}

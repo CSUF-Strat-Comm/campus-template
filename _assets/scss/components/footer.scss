@@ -1,0 +1,75 @@
+/*-----FOOTER------*/
+footer#site-footer {
+	background: #fefefe;
+	border-top: 5px solid $titan_orange;
+	padding: 2rem 0;
+	font-size: $text-size-xs;
+	@include breakpoint(mobile) {
+		text-align: center;
+	}
+
+	.footer-top {
+		margin-bottom: 1.5rem;
+	}
+
+	.csuf-logo {
+		width: 225px;
+		@extend .position-relative;
+		&:after {
+			content: '';
+			width: 1px;
+			height: 100%;
+			background: #ccc;
+			display: block;
+			position: absolute;
+			right: -25px;
+			top: 0;
+			@include breakpoint(mobile) {
+				display: none;
+			}
+		}
+		@include breakpoint(mobile) {
+			max-width: 50%;
+			float: none;
+			margin: 1rem auto !important;
+			display: block;
+		}
+	}
+
+	h1, h2, h3,
+	h4, h5, h6 {
+		font-size: $text-size-xs;
+		margin-bottom: .25rem;
+	}
+
+	.resources-heading {
+		font-weight: 400;
+		@include breakpoint(mobile) {
+			float: none;
+			font-weight: 600;
+		}
+	}
+
+	.resources-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		@include breakpoint(mobile) {
+			float: none;
+		}
+		li {
+			@extend .display-inline-block;
+			@extend .m-l-5;
+			@extend .m-r-5;
+			@include breakpoint(mobile) {
+				display: block !important;
+				text-align: center;
+				margin: 10px 0 !important;
+			}
+			a {
+				@extend .link-minimal;
+			}
+		}
+	}
+
+}

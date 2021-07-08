@@ -1,0 +1,130 @@
+h1, h2, h3,
+h4, h5, h6 {
+	line-height: 1.3em;
+	font-weight: 600;
+	font-style: normal;
+	margin-bottom: 1.25rem;
+	font-family: $body_font;
+}
+
+h1 {
+	font-family: $heading_font;
+	font-weight: 500;
+	font-size: $text-size-3xl;
+	color: $titan_blue;
+}
+
+h2 {
+	font-size: $text-size-2xl;
+}
+
+h3{
+	font-size: $text-size-xl;
+}
+
+h4 {
+	font-size: $text-size-lg;
+}
+
+h5 {
+	font-size: $text-size-md;
+}
+
+h6 {
+	font-size: $text-size-md;
+}
+
+p {
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 1.5em 0;
+	padding-left: 2em;
+	ul,
+	ol {
+		margin: .25em 0;
+	}
+	li {
+		line-height: 1.5em;
+	}
+}
+
+a {
+	color: $medium_blue;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 2px dotted  $medium_blue;
+	@include transition(all,250ms);
+	&:hover {
+		@include transition(all,250ms);
+		color: $text;
+		border-color: $text;
+	}
+	&.link-minimal {
+		font-weight: 400;
+		color: $text;
+		@extend .no-border;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+blockquote {
+	width: 100%;
+	border-top: 3px solid $titan_orange;
+	border-bottom: 3px solid $titan_orange;
+	margin: 2rem 0;
+	padding: 2rem 0;
+	font-family: $heading_font;
+	font-weight: 400;
+	font-style: normal;
+	font-size: $text-size-lg;
+	line-height: 1.5em;
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+	cite {
+		color: $text;
+		font-family: $body_font;
+		font-weight: 300;
+		font-size: $text-size-sm;
+		font-style: normal;
+		margin-top: 15px;
+		display: block;
+		position: relative;
+		padding-left: 1em;
+		&:before {
+			content: '\2014';
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+}
+
+hr {
+	border: none;
+	border-top: 2px dotted#ccc;
+	margin: 2rem 0;
+}
+
+:focus {
+	outline: 2px solid $medium_blue;
+	outline-offset: 2px;
+}
+
+pre {
+	line-height: 1.5em;
+}
+
+code {
+	font-family: 'Fira Code', monospace;
+	background: #f1f1f1;
+	display: inline-block;
+	padding: .1em .35em;
+	font-size: .9em;
+}

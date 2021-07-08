@@ -1,0 +1,46 @@
+.msclips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: .8em;
+    a {
+      display: block;
+      border-bottom: 1px dotted #ccc;
+      padding: 1.2em .5em;
+      text-decoration:none;
+      font-weight: 400;
+      color:#111;
+      @include transition(all,250ms);
+      &:hover,
+      &:focus {
+        background-color: #DFF2FB;
+        @include transition(all,250ms);
+      }
+    }
+
+    img {
+      display: block;
+      height: 20px;
+      width: auto;
+      margin: 0 0 10px 0;
+    }
+
+    h2,
+    h3,
+    h4 {
+      color: black;
+      margin: 0;
+      font-size: 1.4em;
+    }
+      
+  }
+}
+
+.titans-of-media-image{
+	border: none;
+	display: block;
+}

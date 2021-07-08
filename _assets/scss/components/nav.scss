@@ -1,0 +1,183 @@
+nav#main-nav {
+  background: $titan_blue;
+  
+  // Top level tabs
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
+    li {
+      display: inline-block;
+      letter-spacing: 0.05em;
+      margin-right: 5px;
+      position: relative;
+
+      @include breakpoint(mobile) {
+        display: block;
+      }
+
+      a {
+        display: block;
+        padding: .5rem .75rem;
+        text-align: center;
+        color:#fff;
+        text-decoration: none;
+        font-size: $text-size-sm;
+        font-weight: 600;
+        border-bottom: none;
+        @include breakpoint(mobile) {
+          text-align: left;
+        }
+        &:hover,
+        &:focus,
+        &.active {
+          text-decoration: underline dotted;
+          text-underline-offset: 1px;
+        }
+      }
+
+      // Tabs with dropdowns
+      &.menu-item-has-children {
+        > a {
+          position: relative;
+          &:after {
+            @extend .material-icons;
+            @include transition(all,250ms);
+            content: '\e5c5'; // arrow drop down
+            font-size: $text-size-sm !important;
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            width: 100%;
+            @include breakpoint(mobile) {
+              bottom: unset;
+              right: .75rem;
+              width: auto;
+              left: unset;
+              top: 35%;
+            }
+          }
+          &:hover,
+          &:active,
+          &:focus {
+            &:after {
+              @include vendor-prefix('transform','rotate(180deg)');
+              @include transition(all,250ms);
+            }
+          }
+        }
+      }
+      &.current-menu-item,
+      &.active {
+        > a {
+          &:after {
+            @include transition(all,250ms);
+          }
+        }
+      }
+      &.active {
+        > a {
+          &:after {
+            @include vendor-prefix('transform','rotate(180deg)');
+            @include transition(all,250ms);
+          }
+        }
+      }
+
+      // Dropdown Menus
+      ul.sub-menu {
+        border-top: 3px solid $titan_orange;
+        z-index: 10;
+        display: none;
+        position: absolute;
+        top: 99%;
+        left: 0;
+        background: #ffffff;
+        min-width: 250px;
+        @include box-shadow(0,3px,6px, rgba(0,0,0,.16));
+
+        @include breakpoint(mobile) {
+          position: static;
+        }
+        
+        li {
+          margin: 0;
+          display: block;
+
+          a {
+            padding: .85rem 1rem;
+            display: block;
+            color: $medium_blue;
+            text-align: left;
+            font-weight: 600;
+            text-transform: unset;
+            border-bottom: 1px solid #ddd;
+            line-height: 1.3em;
+            &:hover,
+            &:focus {
+              background: #f0f0f0;
+              text-decoration: underline;
+            }
+            // menu items with flyouts
+          }
+
+          &.menu-item-has-children {
+            > a {
+              position: relative;
+              &:after {
+                @extend .material-icons;
+                @include transition(all,250ms);
+                content: '\e5df'; // arrow right
+                font-size: $text-size-sm !important;
+                color: #707070;
+                bottom: unset;
+                right: .75rem;
+                width: auto;
+                left: unset;
+                top: 35%;
+              }
+              &:hover,
+              &:active,
+              &:focus {
+                &:after {
+                  @include vendor-prefix('transform','rotate(180deg)');
+                  @include transition(all,250ms);
+                }
+              }
+            }
+          }
+
+        }
+
+        // Flyout menus
+        ul.sub-menu {
+          left: 100%;
+          top: 0;
+          border: none;
+          background-color: #f0f0f0;
+        }
+
+      }
+
+    }
+
+  }
+
+  #mobile-menu-toggle {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: none;
+    @include breakpoint(mobile) {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+}

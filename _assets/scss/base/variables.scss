@@ -1,0 +1,186 @@
+//Break points
+$breakpoints: (
+  'mobile': 767px,
+  'tablet': 992px,
+  'desktop': 1200px
+);
+
+//Layout
+$wrap_width: 1200px;
+$large_wrap_width: 1350px;
+$small_wrap_width: 700px;
+
+//Fonts
+$body_font: 'proxima-nova', sans-serif;
+$heading_font:  'kepler-std', serif;
+
+//text size
+$base-font-size: 18px;
+$text-size-xs: 0.69rem; // 12.5px
+$text-size-sm: 0.83rem; // 15px
+$text-size-md: 1rem; // 18px
+$text-size-lg: 1.2rem; // 21.6px
+$text-size-xl: 1.44rem; // 25.92px
+$text-size-2xl: 1.73rem; // 31.104px
+$text-size-3xl: 2.07rem; // 37.325px
+$text-size-4xl: 2.49rem; // 44.79px
+$text-size-5xl: 2.99rem;
+
+//Color Scheme
+$text: #222;
+
+// Signature Colors
+$titan_blue: #00274C;
+$titan_orange: #FF7900;
+
+// Secondary Colors
+$dark_medium_blue: #00376b;
+$medium_blue: #084b8a;
+$light_blue: #9cd0e8;
+$pale_blue: #E0EEF5;
+$light_orange: #dc8218;
+$sunshine: #feb210;
+
+// Grays
+$default: #F7F7F7;
+$white: #FFF;
+$light_gray : #E9E9E7;
+$medium_gray: #666666;
+$warm_gray: #5E5654;
+$cool_gray: #484F5F;
+$dark_gray: #333;
+
+// Neutrals
+$cool_gray_80: #3e515a;
+$cool_gray_60: #677983;
+$cool_gray_40: #92a1ab;
+$cool_gray_20: #eaecec;
+$warm_gray_80: #5e514e;
+$warm_gray_60: #877b77;
+$warm_gray_40: #afa9a6;
+$warm_gray_20: #eae6e3;
+$beige: #ded0ae;
+$taupe:	#cdb99c;
+
+// Tertiary
+$brown: #37241e;
+$brick_red: #97321f;
+$burnt_orange: #bf5f16;
+$mustard: #c18d1b;
+$dark_green: #334f2e;
+$medium_green: #516917;
+$light_green: #a8ad00;
+
+// Messaging
+$error: $brick_red;
+$warning: $burnt_orange;
+$success: $dark_green;
+$info: $cool_gray_20;
+
+// Social Media
+$facebook: #3b5998;
+$twitter: #55acee;
+$linkedin: #0077b5;
+$instagram: #3f729b;
+$pinterest: #bd081c;
+$googleplus: #dc4e41;
+$youtube: #cd201f;
+
+@mixin instagram-background() {
+	background:
+	// Use radial gradients to get the rounded
+	// gradient effect in each corner
+
+	// left bottom
+	radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+	radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+	// left top
+	radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+	radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+	//  right top
+	radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+	radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+	// right bottom
+	radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+
+	// create a base coat to smooth
+	// corner gradients
+	linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+@mixin instagram-background-hover() {
+	background:
+	// Use radial gradients to get the rounded
+	// gradient effect in each corner
+
+	// left bottom
+	radial-gradient(circle farthest-corner at 35% 90%, darken(#fec564,10%), transparent 50%),
+	radial-gradient(circle farthest-corner at 0 140%, darken(#fec564,10%), transparent 50%),
+	// left top
+	radial-gradient(ellipse farthest-corner at 0 -25%, darken(#5258cf,10%), transparent 50%),
+	radial-gradient(ellipse farthest-corner at 20% -50%, darken(#5258cf,10%), transparent 50%),
+	//  right top
+	radial-gradient(ellipse farthest-corner at 100% 0, darken(#893dc2,10%), transparent 50%),
+	radial-gradient(ellipse farthest-corner at 60% -20%, darken(#893dc2,10%), transparent 50%),
+	// right bottom
+	radial-gradient(ellipse farthest-corner at 100% 100%, darken(#d9317a,10%), transparent),
+
+	// create a base coat to smooth
+	// corner gradients
+	linear-gradient(darken(#6559ca,10%), darken(#bc318f,10%) 30%, darken(#e33f5f,10%) 50%, darken(#f77638,10%) 70%, darken(#fec66d,10%) 100%);
+}
+
+
+$hamburger-padding-x           : 9px;
+$hamburger-padding-y           : 10px;
+$hamburger-layer-width         : 22px;
+$hamburger-layer-height        : 2px;
+$hamburger-layer-spacing       : 4px;
+$hamburger-layer-color         : white;
+$hamburger-layer-border-radius : 4px;
+$hamburger-hover-opacity       : 1;
+$hamburger-active-layer-color  : $hamburger-layer-color;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity;
+ 
+// To use CSS filters as the hover effect instead of opacity, 
+// set $hamburger-hover-use-filter as true and 
+// change the value of $hamburger-hover-filter accordingly. 
+$hamburger-hover-use-filter   : false;
+$hamburger-hover-filter       : opacity(50%);
+$hamburger-active-hover-filter: $hamburger-hover-filter;
+ 
+// Remove or comment out the hamburger types you don’t want 
+// or need, so they get excluded from the compiled CSS. 
+$hamburger-types: (
+  // 3dx,
+  // 3dx-r,
+  // 3dy,
+  // 3dy-r,
+  // 3dxy,
+  // 3dxy-r,
+  // arrow,
+  // arrow-r,
+  // arrowalt,
+  // arrowalt-r,
+  // arrowturn,
+  // arrowturn-r,
+  // boring,
+  // collapse,
+  // collapse-r,
+  // elastic,
+  // elastic-r,
+  // emphatic,
+  // emphatic-r,
+  // minus,
+  // slider,
+  // slider-r,
+  // spring,
+  // spring-r,
+  // stand,
+  // stand-r,
+  spin,
+  // spin-r,
+  // squeeze,
+  // vortex,
+  // vortex-r
+);

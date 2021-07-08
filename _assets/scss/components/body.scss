@@ -1,0 +1,28 @@
+html,
+body {
+	margin: 0 !important;
+	padding:0; 
+  background-color: #ffffff;
+  color: $text;
+	font-family: $body_font;
+  font-size: $base-font-size;
+}
+
+#skip-nav {
+  a {
+    position: absolute;
+    text-align: left;
+    margin: 0;
+    padding: .5em;
+    left: -1000em;
+    top: 0;
+    background-color: $medium_blue;
+    z-index: 99999;
+    color: white;
+    @include transition(all,250ms);
+    &:focus {
+      left: 0px;
+      @include transition(all,250ms);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+table {
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  caption {
+    font-family: $body_font;
+    font-weight: bold;
+    color: $text;
+    margin-bottom: 10px;
+  }
+  th,
+  td {
+    padding: 0.500em;
+    border: 1px solid #ccc;
+    line-height: 1.313em;
+  }
+  th {
+    background-color: #EBEDEE;
+    text-align: left;
+    font-weight: bold;
+  }
+  &.table-striped {
+    tr {
+      &:nth-child(odd) { 
+        background: #ECECEC;
+      }
+    }
+  }
+  &.table-minimal {
+    th,
+    td {
+      border: none;
+      border-bottom: 1px solid #ccc;
+      background: none;
+    }
+  }
+}

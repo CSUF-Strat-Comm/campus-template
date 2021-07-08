@@ -1,0 +1,68 @@
+.banner {
+  background-color: $cool_gray_20;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  min-height: 300px;
+  &.full-height {
+    height: 100vh;
+  }
+
+  .banner-content {
+    position: absolute;
+    width: $small_wrap_width;
+    z-index: 2;
+    left: 50px;
+    top: 50px;
+
+    &.top-left {
+
+    }
+
+    &.middle-left {
+
+    }
+
+    &.bottom-left {
+
+    }
+
+    &.top-right {
+
+    }
+
+    &.middle-right {
+
+    }
+
+    &.bottom-right {
+
+    }
+
+    &.top-center {
+
+    }
+
+    &.center {
+
+    }
+
+    &.bottom-center {
+
+    }
+
+
+  }
+
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,.25);
+  }
+}
