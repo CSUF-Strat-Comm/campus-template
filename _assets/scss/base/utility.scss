@@ -19,6 +19,15 @@
   text-align: justify;
 }
 
+//text font
+.text-sans-serif {
+	font-family: $sans_serif_font;
+}
+
+.text-serif {
+	font-family: $serif_font;
+}
+
 //text-size
 .text-size-xs {
 	font-size: $text-size-xs;
