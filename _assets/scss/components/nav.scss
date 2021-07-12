@@ -180,4 +180,18 @@ nav#main-nav {
     }
   }
 
+  .hamburger-box {
+    width: 20px;
+    margin-top: -2px;
+    transform: scale(.5);
+    transform-origin: center left;
+    vertical-align: middle;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background: white;
+  }
+
 }
