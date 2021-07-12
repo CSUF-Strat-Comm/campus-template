@@ -1,7 +1,8 @@
 const gulp = require('gulp');
 const autoPrefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
+// const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('node-sass'));
 const concat = require('gulp-concat');
 const plumber = require('gulp-plumber');
 const del = require('del');
