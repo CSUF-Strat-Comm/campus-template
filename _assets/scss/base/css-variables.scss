@@ -1,0 +1,46 @@
+// Set our SCSS varriables as CSS varables so they can be used in production without preprocessing
+
+:root {
+  // breakpoints
+  --breakpoint-mobile: #{map-get($breakpoints, "mobile")};
+  --breakpoint-tablet: #{map-get($breakpoints, "tablet")};
+  --breakpoint-desktop: #{map-get($breakpoints, "desktop")};
+
+  //layout 
+  --wrap-width: #{$wrap_width};
+  --large-wrap-width: #{$large_wrap_width};
+  --small-wrap-width: #{$small_wrap_width};
+
+  // fonts
+  --body-font: #{$body_font};
+  --heading-font: #{$heading_font};
+  --sans-serif-font: #{$sans_serif_font};
+  --serif-font: #{$serif_font};
+
+  //text size
+  --text-size-xs: #{$text-size-xs};
+  --text-size-sm: #{$text-size-sm};
+  --text-size-md: #{$text-size-md};
+  --text-size-lg: #{$text-size-lg};
+  --text-size-2xl: #{$text-size-2xl};
+  --text-size-2xl: #{$text-size-2xl};
+  --text-size-3xl: #{$text-size-3xl};
+  --text-size-4xl: #{$text-size-4xl};
+  --text-size-5xl: #{$text-size-5xl};
+
+  //Color Scheme
+  --text: #{$text};
+
+  // Signature Colors
+  --titan-blue: #{$titan_blue};
+  --titan-orange: #{$titan_orange};
+
+  // Secondary Colors
+  --dark-medium-blue: #{$dark_medium_blue};
+  --medium-blue: #{$medium_blue};
+  --light-blue: #{$light_blue};
+  --pale-blue: #{$pale_blue};
+  --light-orange: #{$light_orange};
+  --sunshine: #{$sunshine};
+
+}
