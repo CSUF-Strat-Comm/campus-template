@@ -84,8 +84,8 @@ gulp.task('compress', function() {
 // };
 
 function watchFiles(cb) {
-  gulp.watch(SCSS_PATH, stylesDevelop);
-  gulp.watch(JS_PATH, scriptsDevelop);
+  gulp.watch(SCSS_PATH, {usePolling: true} , stylesDevelop);
+  gulp.watch(JS_PATH, {usePolling: true} , scriptsDevelop);
   cb();
 }
 
