@@ -36,8 +36,10 @@ nav#main-nav {
         &:hover,
         &:focus,
         &.active {
+          background-color: $dark_medium_blue;
           text-decoration: underline dotted;
           text-underline-offset: 1px;
+          text-decoration-thickness: 2px;
         }
       }
 
@@ -119,7 +121,8 @@ nav#main-nav {
             border-bottom: 1px solid #ddd;
             line-height: 1.3em;
             &:hover,
-            &:focus {
+            &:focus,
+            &.active {
               background: #f0f0f0;
               text-decoration: underline;
             }
