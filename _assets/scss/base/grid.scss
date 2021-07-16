@@ -12,6 +12,9 @@ $breakpoint-large: map-get($breakpoints, "desktop");
   &.large {
     max-width: $large_wrap_width;
   }
+  &.small {
+    max-width: $small_wrap_width;
+  }
 }
 
 .row {
