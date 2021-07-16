@@ -1,0 +1,92 @@
+.accordion__panel[aria-hidden=true] {
+  display: none;
+}
+
+.accordion {
+  margin-bottom: 1.5rem;
+
+  .accordion__header {
+    width: 100%;
+    display: block;
+    text-align: unset;
+    background: #f3f3f3;
+    position: relative;
+    &:hover,
+    &:active,
+    &:focus {
+      background: $dark_medium_blue;
+      color: white;
+    }
+    &[aria-expanded=true] {
+      background: $dark_medium_blue;
+      color: white;
+      &:after {
+        transform: translateY(-50%) rotate(-180deg);
+        @include transition(all,250ms);
+      }
+    }
+    &:after {
+      @extend .material-icons;
+      content: '\e5c5'; // arrow drop down
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      @include transition(all,250ms);
+    }
+  }
+
+  .accordion__panel {
+    padding: .75rem 1.5rem;
+    border: 1px solid #ccc;
+    display: block;
+    overflow: hidden;
+    opacity: 1;
+    transition: visibility 0s ease, max-height 1s ease, opacity 1s ease, padding 1s ease ;
+    max-height: 100em;
+    /* magic number for max-height = enough height */
+    visibility: visible;
+    transition-delay: 0s;
+    &[aria-hidden=true] {
+      display: block;
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition-delay: 1s, 0s, 0s;
+      margin: 0;
+      padding: 0;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+
+    h1, h2, h3, 
+    h4, h5, h6 {
+      font-size: $text-size-xl;
+    }
+  }
+  
+}
+
+.animated-accordion__panel {
+  display: block;
+  overflow: hidden;
+  opacity: 1;
+  transition: visibility 0s ease, max-height 1s ease, opacity 1s ease ;
+  max-height: 100em;
+  /* magic number for max-height = enough height */
+  visibility: visible;
+  transition-delay: 0s;
+  margin: 0;
+  padding: 0;
+ }
+ /* This is the hidden state */
+ [aria-hidden=true].animated-accordion__panel {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 1s, 0s, 0s;
+  margin: 0;
+  padding: 0;
+ }
