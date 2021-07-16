@@ -57,6 +57,11 @@ header {
 				margin: 0 1rem;
 			}
 		}
+		a:hover,
+		a:active {
+			text-decoration-color: $titan_orange;
+			text-decoration-thickness: 2px;
+		}
 		.search-button {
 			background: #efefef;
 			border: 1px solid #ccc;
