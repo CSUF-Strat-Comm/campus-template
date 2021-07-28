@@ -59,8 +59,10 @@ $(document).ready(function () {
 
 		if ($(this).hasClass('is-active')) {
 			$(this).attr('aria-expanded', true);
+			$(this).children('.hamburger-text').text('Close');
 		} else {
-			$(this).attr('aria-hidden', false);
+			$(this).attr('aria-expanded', false);
+			$(this).children('.hamburger-text').text('Menu');
 		}
 
 	});

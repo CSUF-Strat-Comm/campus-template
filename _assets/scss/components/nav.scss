@@ -1,5 +1,8 @@
 nav#main-nav {
   background: $titan_blue;
+  @include breakpoint(mobile) {
+    padding: 0 !important;
+  }
   
   // Top level tabs
   ul {
@@ -16,6 +19,10 @@ nav#main-nav {
       letter-spacing: 0.05em;
       margin-right: 5px;
       position: relative;
+      
+      &.global-nav-item {
+        background-color: $medium_blue;
+      }
 
       @include breakpoint(mobile) {
         display: block;
@@ -39,7 +46,7 @@ nav#main-nav {
           background-color: $dark_medium_blue;
           text-decoration: underline dotted;
           text-underline-offset: 1px;
-          text-decoration-thickness: 2px;
+          text-decoration-thickness: 1px;
         }
       }
 
@@ -176,9 +183,15 @@ nav#main-nav {
     font-weight: bold;
     text-transform: uppercase;
     display: none;
+    &:hover,
+    &:active,
+    &:focus,
+    &.is-active {
+      background-color: $medium_blue;
+    }
     @include breakpoint(mobile) {
-      display: block;
-      width: 100%;
+      display: inline-block;
+      width: auto;
       text-align: left;
     }
   }
