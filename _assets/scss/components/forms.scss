@@ -38,6 +38,14 @@ select {
   &:focus {
     background-color: #EFEDE6;
   }
+  &.error {
+    border-color: $error;
+    background-color: lighten($error, 60%);
+    color: $error;
+    &:focus {
+      outline-color: $error;
+    }
+  }
 }
 
 input[type="submit"],
@@ -63,4 +71,8 @@ label {
   margin-bottom: .5rem;
   font-size: $text-size-sm;
   line-height: 1em;
+  &.error {
+    color: $error;
+    font-weight: 600;
+  }
 }
