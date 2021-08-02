@@ -1,8 +1,13 @@
 $(document).ready(function () {
-
-  // Images in gallery open in modal 
-  $('.blocks-gallery-item a').modaal({
+ 
+  $('.modal-image').modaal({
     type: 'image'
+  });
+
+  $('.modal-inline').modaal();
+
+  $('.modal-video').modaal({
+    type: 'video'
   });
   
 });
