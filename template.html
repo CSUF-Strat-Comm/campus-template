@@ -252,7 +252,8 @@
         <figcaption>Langsdorf Hall</figcaption>
       </figure>
       
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt, nisi facilisis tempus blandit, neque ipsum placerat massa, a venenatis mauris orci quis lacus. Nullam nec ex ac leo consequat fermentum vitae eget lorem. Suspendisse venenatis sagittis accumsan. Pellentesque pulvinar vehicula augue quis dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce tortor velit, posuere at scelerisque at, vulputate a odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin et erat eros.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt, nisi facilisis tempus blandit, neque ipsum placerat massa, a venenatis mauris orci quis lacus. Nullam nec ex ac leo consequat fermentum vitae eget lorem. Suspendisse venenatis sagittis accumsan. Pellentesque pulvinar vehicula augue quis dictum.</p>
+      <p class="text-muted"><small>Class aptent taciti sociosqu</small> ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce tortor velit, posuere at scelerisque at, vulputate a odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin et erat eros.</p>
 
       <p><a href="#">Fusce pellentesque odio a ante convallis,</a> sed fermentum ligula iaculis. Nulla id est elit. Mauris dictum augue sed purus ultricies, in rhoncus orci auctor. Nam quis dui commodo, pretium nunc tristique, condimentum urna. In sed sollicitudin orci, sed blandit tortor. Integer ultrices dolor massa, nec suscipit ipsum elementum vehicula. Mauris facilisis porttitor tincidunt. Etiam volutpat mi leo, a dictum ligula egestas eget. Vestibulum porta metus ac pulvinar congue. Maecenas et urna sit amet elit varius condimentum eu quis lectus. Vivamus vulputate tristique justo sed placerat. Nunc hendrerit tristique orci, et elementum tortor faucibus sit amet.</p>
       
@@ -425,6 +426,10 @@
           <input type="email" id="example-input-email" placeholder="Enter email">
         </div>
         <div class="form-group">
+          <label for="example-input-email" class="error">Email address</label>
+          <input type="email" id="example-input-email" placeholder="Enter email" class="error">
+        </div>
+        <div class="form-group">
           <label for="example-input-number">Number</label>
           <input type="number" id="example-input-number" placeholder="Number">
         </div>
@@ -478,8 +483,8 @@
           <input type="time" id="example-input-time" placeholder="Time">
         </div>
         <div class="form-group">
-          <label for="example-select1">Example select</label>
-          <select id="example-select1">
+          <label for="example-select1" class="error">Example select</label>
+          <select id="example-select1" class="error">
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -488,8 +493,8 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="example-select2">Example multiple select</label>
-          <select multiple id="example-select2">
+          <label for="example-select2" class="error">Example multiple select</label>
+          <select multiple id="example-select2" class="error">
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -498,18 +503,18 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="example-textarea">Example textarea</label>
-          <textarea id="example-textarea" rows="3"></textarea>
+          <label for="example-textarea" class="error">Example textarea</label>
+          <textarea id="example-textarea" rows="3" class="error"></textarea>
         </div>
         <div class="form-group">
-          <label for="example-input-file">File input</label>
-          <input type="file" id="example-input-file">
+          <label for="example-input-file" class="error">File input</label>
+          <input type="file" id="example-input-file" class="error">
         </div>
         <fieldset>
           <legend>I am legend</legend>
           <div class="form-group">
-            <label>
-              <input type="radio" name="options-radios" id="optionsR-radios1" value="option1" checked> Option one is this and that&mdash;be sure to include why it's great
+            <label class="error">
+              <input type="radio" name="options-radios" id="optionsR-radios1" value="option1" checked class="error"> Option one is this and that&mdash;be sure to include why it's great
             </label>
           </div>
   
@@ -527,7 +532,7 @@
   
         <fieldset>
           <legend>I am also legend</legend>
-          <label><input type="checkbox"> Check me out</label>
+          <label class="error"><input type="checkbox" class="error"> Check me out</label>
           <label><input type="checkbox"> Or check me out</label>
         </fieldset>
         
