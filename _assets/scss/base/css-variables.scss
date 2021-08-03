@@ -43,4 +43,32 @@
   --light-orange: #{$light_orange};
   --sunshine: #{$sunshine};
 
+  // Grays
+  --light-gray: #{$light_gray};
+  --medium-gray: #{$medium_gray};
+  --warm-gray: #{$warm_gray};
+  --cool-gray: #{$cool_gray};
+  --dark-gray: #{$dark_gray};
+
+  // Neutrals
+  --cool-gray-80: #{$cool_gray_80};
+  --cool-gray-60: #{$cool_gray_60};
+  --cool-gray-40: #{$cool_gray_40};
+  --cool-gray-20: #{$cool_gray_20};
+  --warm-gray-80: #{$warm_gray_80};
+  --warm-gray-60: #{$warm_gray_60};
+  --warm-gray-40: #{$warm_gray_40};
+  --warm-gray-20: #{$warm_gray_20};
+  --beige: #{$beige};
+  --taupe: #{$taupe};
+
+  // Tertiary
+  --brown: #{$brown};
+  --brick-red: #{$brick_red};
+  --burnt-orange: #{$burnt_orange};
+  --mustard: #{$mustard};
+  --dark-green: #{$dark_green};
+  --medium-green: #{$medium_green};
+  --light-green: #{$light_green};
+
 }
