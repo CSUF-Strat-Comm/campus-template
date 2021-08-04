@@ -114,6 +114,16 @@
 			color: #fff;
 			border: 1px solid $medium_blue;
 		}
+		&.outline {
+			background-color: transparent;
+			color: $pale_blue;
+			border: 1px solid $pale_blue;
+			&:hover,
+			&:focus {
+				background-color: $pale_blue;
+				color: $medium_blue;
+			}
+		}
 	}
 
 	&.black {
@@ -125,6 +135,37 @@
 			background-color :#fff;
 			color: #333;
 			border: 1px solid #999;
+		}
+		&.outline {
+			background-color: transparent;
+			color: #000;
+			border: 1px solid black;
+			&:hover,
+			&:focus {
+				background-color: black;
+				color: white;
+			}
+		}
+	}
+
+	&.white {
+		background-color: white;
+		color: black;
+		border: 1px solid white;
+		&:hover,
+		&:focus {
+			background-color: black;
+			color: white;
+			border: 1px solid black;
+		}
+		&.outline {
+			background-color: transparent;
+			color: white;
+			border: 1px solid white;
+			&:hover,
+			&:focus {
+				background-color: black;
+			}
 		}
 	}
 }
