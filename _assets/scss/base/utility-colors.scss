@@ -1,165 +1,64 @@
-//text color
-.text-white {
-	color: #fff;
-}
+// Color Utilities
+$colors: (
+	'white': $white,
+	'black': $black,
+	'titan-blue': $titan_blue,
+	'titan-orange': $titan_orange,
+	'dark-medium-blue': $dark_medium_blue,
+	'medium-blue': $medium_blue,
+	'light-blue': $light_blue,
+	'pale-blue': $pale_blue,
+	'light-orange': $light_orange,
+	'sunshine': $sunshine,
+	'light-gray': $light_gray,
+	'medium-gray': $medium_gray,
+	'warm-gray': $warm_gray,
+	'cool-gray': $cool_gray,
+	'dark-gray': $dark_gray,
+	'brown': $brown,
+	'brick-red': $brick_red,
+	'burnt-orange': $burnt_orange,
+	'mustard': $mustard,
+	'dark-green': $dark_green,
+	'medium-green': $medium_green,
+	'light-green': $light_green
+);
 
-.text-black {
-	color: #000;
-}
+@each $name, $color in $colors {
 
-.text-titan-blue {
-	color: $titan_blue;
-}
+	.text-#{$name} {
+		color: #{$color};
+	}
 
-.text-titan-orange {
-	color: $titan_orange;
-}
+	.background-#{$name} {
+		background-color: #{$color};
+		&.opacity-10 {
+			background-color: rgba($color, .1);
+		}
+		&.opacity-20 {
+			background-color: rgba($color, .2);
+		}
+		&.opacity-30 {
+			background-color: rgba($color, .3);
+		}
+		&.opacity-40 {
+			background-color: rgba($color, .4);
+		}
+		&.opacity-50 {
+			background-color: rgba($color, .5);
+		}
+		&.opacity-60 {
+			background-color: rgba($color, .6);
+		}
+		&.opacity-70 {
+			background-color: rgba($color, .7);
+		}
+		&.opacity-80 {
+			background-color: rgba($color, .8);
+		}
+		&.opacity-90 {
+			background-color: rgba($color, .9);
+		}
+	}
 
-.text-dark-medium-blue {
-	color: $dark_medium_blue;
-}
-
-.text-medium-blue {
-	color: $medium_blue;
-}
-
-.text-light-blue {
-	color: $light_blue;
-}
-
-.text-pale-blue {
-	color: $pale_blue;
-}
-
-.text-light-orange {
-	color: $light_orange;
-}
-
-.text-sunshine {
-	color: $sunshine;
-}
-
-.text-light-gray {
-	color: $light_gray;
-}
-
-.text-medium-gray {
-	color: $medium_gray;
-}
-
-.text-warm-gray {
-	color: $warm_gray;
-}
-
-.text-cool-gray {
-	color: $cool_gray;
-}
-
-.text-dark-gray {
-	color: $dark_gray;
-}
-
-.text-brown {
-	color: $brown;
-}
-.text-brick-red {
-	color: $brick_red;
-}
-.text-burnt-orange {
-	color: $burnt_orange;
-}
-.text-mustard {
-	color: $mustard;
-}
-.text-dark-green {
-	color: $dark_green;
-}
-.text-medium-green {
-	color: $medium_green;
-}
-.text-light-green {
-	color: $light_green;
-}
-
-//background color
-.background-white {
-	background-color: #fff;
-}
-
-.background-black {
-	background-color: #000;
-}
-
-.background-titan-blue {
-	background-color: $titan_blue;
-}
-
-.background-titan-orange {
-	background-color: $titan_orange;
-}
-
-.background-dark-medium-blue {
-	background-color: $dark_medium_blue;
-}
-
-.background-medium-blue {
-	background-color: $medium_blue;
-}
-
-.background-light-blue {
-	background-color: $light_blue;
-}
-
-.background-pale-blue {
-	background-color: $pale_blue;
-}
-
-.background-light-orange {
-	background-color: $light_orange;
-}
-
-.background-sunshine {
-	background-color: $sunshine;
-}
-
-.background-light-gray {
-	background-color: $light_gray;
-}
-
-.background-medium-gray {
-	background-color: $medium_gray;
-}
-
-.background-warm-gray {
-	background-color: $warm_gray;
-}
-
-.background-cool-gray {
-	background-color: $cool_gray;
-}
-
-.background-dark-gray {
-	background-color: $dark_gray;
-}
-
-.background-brown {
-	background-color: $brown;
-}
-.background-brick-red {
-	background-color: $brick_red;
-}
-.background-burnt-orange {
-	background-color: $burnt_orange;
-}
-.background-mustard {
-	background-color: $mustard;
-}
-.background-dark-green {
-	background-color: $dark_green;
-}
-.background-medium-green {
-	background-color: $medium_green;
-}
-.background-light-green {
-	background-color: $light_green;
 }
