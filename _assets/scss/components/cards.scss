@@ -3,8 +3,14 @@
   margin-bottom: 1.5rem;
   flex-direction: row;
   flex-wrap: wrap;
+  @include breakpoint(mobile) {
+    display: block;
+  }
   .card {
     width: 30%;
+    @include breakpoint(mobile) {
+      width: unset;
+    }
   }
   &.card-margins {
     justify-content: space-between;
