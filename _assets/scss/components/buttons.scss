@@ -47,8 +47,8 @@
 		border: 1px solid $titan_blue;
 		&:hover,
 		&:focus {
-			background-color: #000;
-			border: 1px solid #000;
+			background-color: $medium_blue;
+			border: 1px solid $medium_blue;
 		}
 		&.outline {
 			background-color: transparent;
