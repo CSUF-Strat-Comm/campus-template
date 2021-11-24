@@ -38,8 +38,7 @@ select {
   &:focus {
     background-color: #EFEDE6;
   }
-  &.error,
-  &:invalid {
+  &.error {
     border-color: $error;
     background-color: lighten($error, 60%);
     color: $error;
