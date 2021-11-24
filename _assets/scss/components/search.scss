@@ -1,6 +1,8 @@
 #search-container {
   overflow-y: scroll;
   top: -100vh;
+  // display: block;
+  // top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -23,6 +25,11 @@
 
     #search-form {
       border-right: 1px solid white;
+      @include breakpoint('mobile') {
+        margin-right: 0 !important;
+        width: 100% !important;
+        padding: 0 !important;
+      }
     }
 
     #search-submit {
