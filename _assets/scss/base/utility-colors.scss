@@ -71,4 +71,13 @@ $colors: (
 		}
 	}
 
+	// Wordpress custom color support
+	.has-#{$name}-color {
+		color: #{$color};
+	}
+	
+	.has-#{$name}-background-color {
+		background-color: #{$color};
+	}
+
 }
