@@ -15,6 +15,10 @@ header {
 	.site-branding {
 		margin-bottom: .6rem;
 		position: relative;
+		@include breakpoint(mobile) {
+			display: flex;
+			align-items: center;
+		}
 
 		.csuf-logo {
 			display: block;
@@ -24,6 +28,7 @@ header {
 			position: relative;
 			@include breakpoint(mobile) {
 				width: 30px;
+				margin-right: 10px;
 			}
 			&:after {
 				content: '';
@@ -35,6 +40,9 @@ header {
 				right: -15px;
 				top: 50%;
 				transform: translateY(-50%);
+				@include breakpoint(mobile) {
+					display: none;
+				}
 			}
 		}
 	
