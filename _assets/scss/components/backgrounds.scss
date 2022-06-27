@@ -1,0 +1,23 @@
+.background-tree {
+  background-image: url('./images/bg-tree.jpg');
+  background-color: $titan-blue;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background-tree-light {
+  background-image: url('./images/bg-tree-light.jpg');
+  background-color: $gray;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include darkmode() {
+    background-image: url('./images/bg-tree.jpg');
+  }
+}
+
+.background-blue-vector {
+  background-image: url('./images/bg-vector-blue.jpg');
+  background-color: $medium-blue;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

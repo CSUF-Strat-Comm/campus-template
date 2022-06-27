@@ -1,7 +1,7 @@
+$('ul.main-nav-list li:has("ul")').addClass('menu-item-has-children');
+$('li.menu-item-has-children > ul').addClass('sub-menu');
+	
 $(document).ready(function () {
-
-	$('ul.main-nav-list li:has("ul")').addClass('menu-item-has-children');
-	$('li.menu-item-has-children > ul').addClass('sub-menu');
 
   // When interacting with a li that has a sub menu
 	$('ul.main-nav-list li:has("ul")').on('mouseover keyup click mouseleave', function(e) {
@@ -50,20 +50,58 @@ $(document).ready(function () {
 		}
 	})
 
-	// Toggle menu with hamburger button
-	$('#mobile-menu-toggle').click(function (e) { 
-
-		e.preventDefault();
-		$(this).toggleClass('is-active');
-		$('#main-nav-list').slideToggle().focus();
-
-		if ($(this).hasClass('is-active')) {
-			$(this).attr('aria-expanded', true);
-			$(this).children('.hamburger-text').text('Close');
-		} else {
-			$(this).attr('aria-expanded', false);
-			$(this).children('.hamburger-text').text('Menu');
-		}
-
-	});
 });
+
+// Toggle menu with hamburger button
+$('#mobile-menu-toggle').click(function (e) { 
+
+	e.preventDefault();
+
+	closeFullMenu(tabswitch = true);
+	closeSearchContainer(tabswitch = true);
+	// mobileMenuToggle();
+
+	$(this).toggleClass('is-active');
+
+	if ($(this).hasClass('is-active')) {
+		openMobileMenu();
+	} else {
+		closeMobileMenu();
+	}
+	
+});
+
+function mobileMenuToggle() {
+	$('#mobile-menu-toggle').toggleClass('is-active');
+	$('#main-nav-list').slideToggle().focus();
+	$("body").toggleClass("modaal-noscroll screen-tint");
+
+	if ($('#mobile-menu-toggle').hasClass('is-active')) {
+		$('#mobile-menu-toggle').attr('aria-expanded', true);
+		$('#mobile-menu-toggle').children('.hamburger-text').text('Close');
+	} else {
+		$('#mobile-menu-toggle').attr('aria-expanded', false);
+		$('#mobile-menu-toggle').children('.hamburger-text').text('Menu');
+	}
+}
+
+function openMobileMenu() {
+	$('#mobile-menu-toggle').addClass('is-active');
+	$('#main-nav-list').slideDown().focus();
+	$("body").addClass("modaal-noscroll screen-tint");
+	$('#mobile-menu-toggle').attr('aria-expanded', true);
+	$('#mobile-menu-toggle').children('.hamburger-text').text('Close');
+}
+
+function closeMobileMenu(tabswitch = false) {
+	$('#mobile-menu-toggle').removeClass('is-active');
+	$('#main-nav-list').slideUp();
+	if ( tabswitch === false ) {
+		$("body").removeClass("modaal-noscroll");
+	}
+	if ( $('html').attr('data-breakpoint') === 'mobile' && tabswitch === false ) {
+		$("body").removeClass("screen-tint");
+	}
+	$('#mobile-menu-toggle').attr('aria-expanded', false);
+	$('#mobile-menu-toggle').children('.hamburger-text').text('Menu');
+}

@@ -7,19 +7,32 @@
 
   .accordion__header {
     width: 100%;
+    font-weight: 500;
     display: block;
     text-align: unset;
-    background: #f3f3f3;
+    background: var(--beige);
+    border: 1px solid #E2DDCA;
+    @include darkmode() {
+      border-color: #4e555e;
+    }
     position: relative;
+    margin: 0 0 .5rem 0;
+    line-height: 1.25rem;
+    padding: 1rem 2rem 1rem 1rem;
+    color: var(--text);
     &:hover,
     &:active,
     &:focus {
-      background: $dark_medium_blue;
-      color: white;
+      // background: $dark_medium_blue;
+      // color: white;
+      color: var(--text);
+      text-decoration: underline;
     }
     &[aria-expanded=true] {
-      background: $dark_medium_blue;
-      color: white;
+      // background: $dark_medium_blue;
+      // color: white;
+      margin: 0;
+      border-bottom: 0;
       &:after {
         transform: translateY(-50%) rotate(-180deg);
         @include transition(all,250ms);
@@ -27,9 +40,11 @@
     }
     &:after {
       @extend .material-icons;
-      content: '\e5c5'; // arrow drop down
+      content: '\e313'; // arrow drop down
+      font-size: $text-size-lg;
+      color: var(--text);
       position: absolute;
-      right: 1.5rem;
+      right: 1rem;
       top: 50%;
       transform: translateY(-50%);
       @include transition(all,250ms);
@@ -37,22 +52,28 @@
   }
 
   .accordion__panel {
-    padding: .75rem 1.5rem;
-    border: 1px solid #ccc;
+    padding: .75rem 1.5rem 1rem 1.5rem;
+    background: var(--beige);
+    border: 1px solid #E2DDCA;
+    @include darkmode() {
+      border-color: #4e555e;
+    }
+    border-top: none;
     display: block;
     overflow: hidden;
     opacity: 1;
-    transition: visibility 0s ease, max-height 1s ease, opacity 1s ease, padding 1s ease ;
+    transition: visibility 0s ease, max-height 300ms ease, opacity 300ms ease, padding 100ms ease ;
     max-height: 100em;
     /* magic number for max-height = enough height */
     visibility: visible;
     transition-delay: 0s;
+    margin-bottom: .5rem;
     &[aria-hidden=true] {
       display: block;
       max-height: 0;
       opacity: 0;
       visibility: hidden;
-      transition-delay: 1s, 0s, 0s;
+      transition-delay: 150ms, 0s, 0s;
       margin: 0;
       padding: 0;
     }
@@ -60,10 +81,60 @@
       margin-bottom: 0;
     }
 
-    h1, h2, h3, 
-    h4, h5, h6 {
-      font-size: $text-size-xl;
+    .js-accordion__header {
+      display: none;
     }
+
+    // h1, h2, h3, 
+    // h4, h5, h6 {
+    //   font-size: $text-size-xl;
+    // }
   }
   
+}
+
+
+.accordion-simple {
+
+  .accordion__header {
+    background: none;
+    border: none;
+    border-bottom: 1px dotted #979797;
+    padding: 1rem 1rem 1rem 2.25rem;
+    @include darkmode() {
+      border-color: #4e555e;
+    }
+    &:after {
+      @extend .material-icons;
+      content: '\e148'; // plus icon
+      font-size: $text-size-lg;
+      position: absolute;
+      left: .5rem;
+      top: 50%;
+      color: #666666;
+      transform: translateY(-50%);
+      @include transition(all,250ms);
+    }
+    &[aria-expanded=true] {
+      border: none;
+      margin: 0;
+      &:after {
+        content: '\e15d'; // minus icon
+        transform: translateY(-50%);
+        @include transition(all,250ms);
+      }
+    }
+  }
+
+  .accordion__panel {
+    background: none;
+    border: none;
+    border-bottom: 2px dotted #707070;
+    padding: .75rem 1.5rem 1rem 2.25rem;
+    @include darkmode() {
+      border-color: #4e555e;
+    }
+  }
+
+
 }

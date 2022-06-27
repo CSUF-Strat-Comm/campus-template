@@ -1,64 +1,127 @@
 header {
-	border-top: 5px solid $titan_orange;
-	padding-top: .6rem;
+	border-top: 5px solid var(--titan-orange);
+	// padding-top: .6rem;
+	@include breakpoint(mobile) {
+		// border-top-width: 3px;
+		padding: 0;
+		border-bottom: 1px solid #ccc;
+		@include darkmode() {
+			border-bottom-color: #2f3846;
+		}
+	}
+
+	// .header-top-bar {
+	// 	height: 5px;
+	// 	background: $medium_blue;
+	// 	position: relative;
+	// 	overflow: hidden;
+	// 	.header-orange-span {
+	// 		background: $titan_orange;
+	// 		display: block;
+	// 		width: 26%;
+	// 		height: 5px;
+	// 		float: right;
+	// 		transform: skewX(300deg);
+	// 		margin-right: -5px;
+	// 	}
+	// }
 
 	.header-top {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		padding: .4rem 25px;
+		border-bottom: 1px solid #ccc;
+		@include darkmode() {
+			border-bottom-color: #2f3846;
+		}
 		@include breakpoint(mobile) {
-			padding-right: 15px !important;
-			padding-left: 15px !important;
+			padding-right: 2.5%;
+			padding-left: 2.5%;
+		}
+	}
+
+	#global-branding {
+		width: 180px;
+		height: 30px;
+		background: url('./images/csuf-wordmark.svg') no-repeat center center;
+		background-size: contain;
+		@include darkmode() {
+			background-image: url('./images/csuf-wordmark-reversed.svg');
 		}
 	}
 
 	.site-branding {
 		margin-bottom: .6rem;
 		position: relative;
+		padding-right: 25px;
+		padding-left: 25px;
 		@include breakpoint(mobile) {
-			display: flex;
-			align-items: center;
+			padding-right: 2.5%;
+			padding-left: 2.5%;
 		}
 
-		.csuf-logo {
-			display: block;
-			// padding: .5rem 1rem .5rem;
-			width: 40px;
-			margin-right: 30px;
-			position: relative;
-			@include breakpoint(mobile) {
-				width: 30px;
-				margin-right: 10px;
-			}
-			&:after {
-				content: '';
-				width: 1px;
-				height: 70%;
-				background: #ccc;
-				display: block;
-				position: absolute;
-				right: -15px;
-				top: 50%;
-				transform: translateY(-50%);
-				@include breakpoint(mobile) {
-					display: none;
-				}
-			}
-		}
+		// .csuf-logo {
+		// 	display: block;
+		// 	// padding: .5rem 1rem .5rem;
+		// 	width: 40px;
+		// 	height: 62px;
+		// 	background-image: url('./images/csuf-emblem.svg');
+		// 	background-repeat: no-repeat;
+		// 	background-position: center center;
+		// 	background-size: contain;
+		// 	margin-right: 30px;
+		// 	position: relative;
+		// 	@include darkmode() {
+		// 		background-image: url('./images/csuf-emblem-white-outline.svg');
+		// 	}
+		// 	@include breakpoint(mobile) {
+		// 		// display: none;
+		// 		margin-right: 10px;
+		// 		width: 30px;
+		// 	}
+		// 	&:after {
+		// 		content: '';
+		// 		width: 1px;
+		// 		height: 70%;
+		// 		background: #ccc;
+		// 		display: block;
+		// 		position: absolute;
+		// 		right: -15px;
+		// 		top: 50%;
+		// 		transform: translateY(-50%);
+		// 		@include breakpoint(mobile) {
+		// 			display: none;
+		// 		}
+		// 		// @include darkmode() {
+		// 		// 	background: #4e555e;
+		// 		// }
+		// 	}
+		// }
 	
 		.site-name {
-			font-size: $text-size-2xl;
-			color: $titan_blue;
-			font-family: $heading_font;
+			font-size: $text-size-xl;
+			color: var(--titan-blue);
+			font-family: $body_font;
 			font-weight: 500;
+			text-decoration: none;
 			// top: 50%;
 			// transform: translateY(-50%);
 			// position: absolute;
 			margin-top: .9rem;
 			display: inline-block;
+			// -webkit-text-stroke-width: 0.5px;
+			// -webkit-text-stroke-color: var(--titan-blue);
+			// -webkit-text-fill-color: var(--titan-blue);
 			@include breakpoint(mobile) {
-				font-size: $text-size-xl;
+				// font-size: $text-size-xl;
 				margin-top: .6rem;
+				line-height: 1.25em;
+			}
+			@include darkmode() {
+				color: white;
+				// -webkit-text-stroke-color: white;
+				// -webkit-text-fill-color: white;
 			}
 		}
 
@@ -73,62 +136,331 @@ header {
 			li {
 				display: inline-block;
 				list-style: none;
-				margin: 0 1rem;
+				margin: 0 .75rem;
+				vertical-align: middle;
 			}
 		}
-		a:hover,
-		a:active {
-			text-decoration-color: $titan_orange;
-			text-decoration-thickness: 2px;
+		a,
+		button {
+			font-size: $text-size-sm;
+			&:hover,
+			&:active {
+				text-decoration-color: var(--titan-orange);
+				text-decoration-thickness: 2px;
+			}
+		}
+		#full-menu-toggle {
+			&.is-active {
+				.material-icons {
+					transform: rotate(180deg);
+					@include transition(transform,250ms);
+				}
+			}
+			@include breakpoint(mobile) {
+				padding: .25rem;
+			}
 		}
 	}
 
 	.search-button {
 		background: #efefef;
 		border: 1px solid #ccc;
-		border-radius: 1.5rem;
-		padding: .5rem 1rem;
-		line-height: 1em;
+		// border-radius: 50%;
+		// padding: 0;
 		font-size: $text-size-sm;
 		margin: 0;
+		border-radius: 1.5rem;
+    padding: 0.345rem 1rem;
+    line-height: 1em;
+		color: var(--text);
+		cursor: pointer;
 		&:hover,
 		&:focus {
-			background: $dark_medium_blue;
+			background: var(--medium-blue);
 			border-color: $medium_blue;
-		}
-		@include breakpoint(mobile) {
-			background: $medium_blue;
 			color: white;
+		}
+		@include darkmode() {
+			background: #313a46;
+			border-color: white;
+			&:hover,
+			&:focus {
+				background: var(--medium-blue);
+				border-color:  var(--sky-blue);
+			}
+		}
+		// @include breakpoint(mobile) {
+		// 	background: $medium_blue;
+		// 	color: white;
+		// 	border: none;
+		// 	font-size: $text-size-lg;
+		// 	padding: 14.28px 15px 14.28px 5px;
+		// 	border-radius: 0;
+		// 	float: right;
+		// 	position: relative;
+		// 	&:after {
+		// 		right: 100%;
+		// 		top: 0;
+		// 		border: solid transparent;
+		// 		content: "";
+		// 		height: 0;
+		// 		width: 0;
+		// 		position: absolute;
+		// 		pointer-events: none;
+		// 		border-right-color: $medium_blue;
+		// 		border-width: 26px;
+		// 		@include transition(all,250ms);
+		// 	}
+		// 	&:hover,
+		// 	&:focus {
+		// 		&:after {
+		// 			@include transition(all,250ms);
+		// 			border-right-color: $dark_medium_blue;
+		// 		}
+		// 	}
+		// 	.search-button-text {
+		// 		display: none;
+		// 	}
+
+		// }
+		@include breakpoint(mobile) {
+			background: none;
+			color: var(--text);
 			border: none;
-			font-size: $text-size-lg;
-			padding: 14.28px 15px 14.28px 5px;
 			border-radius: 0;
-			float: right;
-			position: relative;
-			&:after {
-				right: 100%;
-				top: 0;
-				border: solid transparent;
-				content: "";
-				height: 0;
-				width: 0;
+			// font-size: $text-size-lg;
+			// width: 50%;
+			// height: 2.5rem;
+			padding: .25rem;
+			@include darkmode() {
+				background: none;
+			}
+		}
+	}
+
+	.theme-toggle {
+		position: relative;
+		display: inline-block;
+		width: 50px;
+		height: 30px;
+		margin: 0;
+		line-height: inherit;
+		@include breakpoint(mobile) {
+			margin: .4rem 0;
+		}
+		input { 
+			opacity: 0;
+			width: 0;
+			height: 0;
+			&:checked + .slider {
+				// background-color: #2196F3;
+				&:before {
+					transform: translateX(20px);
+					content: "\ef5e" // moon icon
+				}
+			}
+			&:focus + .slider {
+				outline: 2px solid var(--medium-blue);
+				outline-offset: 2px;
+			}
+		}
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: #efefef;
+			border: 1px solid #ccc;
+			transition: .4s;
+			border-radius: 15px;
+			@include darkmode() {
+				background: #313a46;
+				border-color: #4b5562;
+			}
+			&:before {
 				position: absolute;
-				pointer-events: none;
-				border-right-color: $medium_blue;
-				border-width: 26px;
-				@include transition(all,250ms);
+				font-family: 'Material Icons';
+				color: $text;
+				font-size: $text-size-xs;
+				content: "\e518"; // sun icon
+				text-align: center;
+				height: 20px;
+				width: 20px;
+				left: 5px;
+				bottom: 5px;
+				background-color: white;
+				transition: .4s;
+				border-radius: 50%;
+				box-shadow: 2px 2px 3px rgba(0,0,0,.16);
+			}
+		}
+	}
+
+	&.header-homepage,
+	&.header-landing-page {
+		// @include vertical-gradient(rgba(0,0,0,.75), rgba(0,0,0,.0));
+		background: -moz-linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4290091036414566) 32%, rgba(0,0,0,0.75) 100%);
+		background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4290091036414566) 32%, rgba(0,0,0,0.75) 100%);
+		background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4290091036414566) 32%, rgba(0,0,0,0.75) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+		position: absolute;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		width: 100%;
+		border-bottom: none;
+		.site-name {
+			color: white;
+			// font-weight: 300;
+			// -webkit-text-stroke-width: 0.25px;
+			// -webkit-text-stroke-color: white;
+			// -webkit-text-fill-color: white;
+		}
+		// .csuf-logo {
+		// 	background-image: url('./images/csuf-emblem-white-outline.svg');
+		// 	&:after {
+		// 		background: rgba(255,255,255,.4);
+		// 	}
+		// }
+		.header-top {
+			border-bottom: 1px solid rgba(255,255,255,.4);
+			@include darkmode() {
+				border-bottom: 1px solid rgba(255,255,255,.4);
+			}
+		}
+		#global-branding {
+			background-image: url('./images/csuf-wordmark-reversed.svg');
+		}
+		#global-nav {
+			a,
+			button {
+				color: white;
+			}
+		}
+		nav#main-nav {
+			background: none;
+			border-top: 1px solid rgba(255,255,255,.0);
+			border-bottom: 1px solid rgba(255,255,255,.4);
+			@include breakpoint(mobile) {
+				border: none;
+			}
+			ul#main-nav-list {
+				li {
+					a {
+						text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+						&:hover,
+						&:active {
+							text-shadow: none;
+						}
+					}
+				}
+			}
+		}
+		.search-button {
+			background: none;
+			border: 1px solid rgba(255,255,255,.4);
+			color: white;
+			@include darkmode() {
+				background: none;
+				border: 1px solid rgba(255,255,255,.4);
+				&:hover,
+				&:focus {
+					background: var(--medium-blue);
+				}
 			}
 			&:hover,
 			&:focus {
-				&:after {
-					@include transition(all,250ms);
-					border-right-color: $dark_medium_blue;
+				background: var(--medium-blue);
+			}
+		}
+		.theme-toggle {
+			.slider {
+				background: none;
+				border: 1px solid rgba(255,255,255,.4);
+				@include darkmode() {
+					background: none;
+					border: 1px solid rgba(255,255,255,.4);
 				}
 			}
+		}
+	}
+
+	&.header-fixed {
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: var(--background);
+		display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    // transition: all 250ms;
+    flex-wrap: wrap;
+
+		.header-top {
+			border: none;
+		}
+
+		#global-branding {
+			display: none;
+		}
+
+		.site-name {
+			font-size: $text-size-lg;
+		}
+
+		#main-nav {
+			width: 100%;
+			ul#main-nav-list {
+				li {
+					a {
+						font-size: $text-size-xs;
+						padding: .25rem .5rem;
+					}
+					&.menu-item-has-children > a:after {
+						bottom: -1px;
+					}
+				}
+			}
+		}
+
+		#global-nav {
+			li {
+				margin: 0 0.45rem;
+			}
+		}
+
+		.search-button {
+			padding: 0.345rem .4rem;
 			.search-button-text {
 				display: none;
 			}
+		}
+		
+	}
 
+	&.header-landing-page {
+		.csuf-logo {
+			margin-right: 15px;
+			&::after {
+				display: none;
+			}
+		}
+		.site-name {
+			img {
+				width: 220px;
+			}
+		}
+		.header-top {
+			border-bottom: none !important;
+			padding: 1.25rem;
+		}
+		#global-branding {
+			width: 180px;
+			height: 20px;
 		}
 	}
 

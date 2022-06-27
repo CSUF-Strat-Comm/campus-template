@@ -28,6 +28,24 @@
 	font-family: $serif_font;
 }
 
+$fontWeights: (100, 200, 300, 400, 500, 600, 700, 800, 900);
+
+@each $weight in $fontWeights {
+
+	.text-weight-#{$weight} {
+		font-weight: #{$weight};
+	}
+
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-lowercase {
+	text-transform: lowercase;
+}
+
 //text-size
 .has-text-xs-font-size,
 .text-size-xs {
@@ -74,6 +92,15 @@
 	font-size: $text-size-5xl;
 }
 
+.has-text-6xl-font-size,
+.text-size-6xl {
+	font-size: $text-size-6xl;
+}
+
+.text-shadow {
+	text-shadow: 1px 1px 3px rgba(0,0,0,.7);
+}
+
 //float options
 .clear {
 	clear: both;
@@ -103,10 +130,6 @@
 		width: 100%;
 		clear: both;
 	}
-}
-
-.no-border {
-	border: none;
 }
 
 // Display classes
@@ -220,4 +243,58 @@ $heightViewportAmounts: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
 		height: #{$height}vh !important;
 	}
 
+}
+
+// Borders
+$borderWidths: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10); 
+$sides: (top, bottom, left, right);
+$borderStyles: ('dashed', 'solid', 'dotted'); 
+
+@each $width in $borderWidths {
+
+	.border-#{$width} {
+		border-width: #{$width}px !important;
+	}
+
+}
+
+@each $width in $borderWidths {
+    @each $side in $sides {
+        .border-#{str-slice($side, 0, 1)}-#{$width} {
+            border-#{$side}-width: #{$width}px !important;
+        }
+    }
+}
+
+.border-solid {
+	border-style: solid;
+}
+
+.border-dashed {
+	border-style: dashed;
+}
+
+.border-dotted {
+	border-style: dotted;
+}
+
+@each $style in $borderStyles {
+	@each $side in $sides {
+			.border-#{str-slice($side, 0, 1)}-#{$style} {
+					border-#{$side}-style: #{$style} !important;
+			}
+	}
+}
+
+.no-border {
+	border: none;
+}
+
+.border-radius-50 {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.aspect-ratio-1 {
+	aspect-ratio: 1;
 }

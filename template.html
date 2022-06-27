@@ -21,26 +21,47 @@
   <div id="skip-nav">
 		<a href="#main-content">Skip to Content (Press Enter)</a>
 	</div>
+  <!-- <div class="alert-campus">
+    <span class="material-icons-round">warning_amber</span>
+    Campus closure due to severe storm and flooding in area. <a href="#">Learn More</a>
+  </div> -->
   <header id="site-header">
-    <div class="header-top p-r-25 p-l-25">
+    
+    <div class="header-top">
 
-      <div class="site-branding">
-        <a href="http://fullerton.edu/" class="csuf-logo float-left no-border"><img src="_assets/images/csuf-emblem.svg" alt="CSUF Emblem" title="CSUF Homepage" class="display-block" /></a>
-        <a href="#" class="site-name no-border">Site Name</a>
-      </div>
+      <!-- <div class="site-branding">
+        <a href="http://fullerton.edu/" class="csuf-logo float-left no-border" title="CSUF Homepage"></a>
+        
+      </div> -->
+
+      <a href="http://fullerton.edu/" title="Cal State Fullerton Homepage" id="global-branding"></a>
 
       <nav id="global-nav" aria-label="University">
         <ul>
-          <li><a class="link-minimal" href="#">Students One Stop</a></li>
-          <li><a class="link-minimal" href="#">Admissions</a></li>
-          <li><a class="link-minimal" href="#">Academics</a></li>
-          <li><a class="link-minimal" href="#">Give</a></li>
-          <li><button class="search-button" id="open-search-container"><span class="search-button-text">Search</span> <span class="material-icons">search</span></button></li>
+          <li>
+            <a class="link-minimal" href="https://my.fullerton.edu/"><span class="material-icons text-titan-orange" role="img" aria-hidden="true">lock</span> Portal Login</a>
+          </li>
+          <li>
+            <button id="full-menu-toggle" type="button" aria-expanded="false" aria-controls="full-menu" title="Show/Hide Full Menu" class="button-minimal">Resources <span class="material-icons text-size-sm" role="img" aria-hidden="true">arrow_drop_down</span></button>
+          </li>
+          <li>
+            <button class="search-button" type="button" id="open-search-container" aria-expanded="false" aria-controls="search-container" title="Show/Hide Search">
+              <span class="search-button-text">Search</span>
+              <span class="material-icons" role="img" aria-hidden="true">search</span>
+            </button>
+          </li>
+          <li>
+            <label class="theme-toggle" title="Toggle theme">
+              <input type="checkbox" id="theme-toggle" name="theme" aria-label="Toggle Light/Dark Theme"  />
+              <span class="slider round"></span>
+            </label>
+          </li>
         </ul>
       </nav>
-
       
-      
+    </div>
+    <div class="site-branding">
+      <a href="#" class="site-name">Site Name</a>
     </div>
     <nav id="main-nav" class="p-r-15 p-l-15" aria-label="Main">
 
@@ -93,23 +114,146 @@
       </ul>
       
     </nav>
+    <div id="full-menu" aria-labelledby="full-menu-label">
+      <h2 id="full-menu-label" class="hidden">Full Menu</h2>
+      <div class="full-menu-left">
+
+        <div class="full-menu-left-column">
+          <h3>Academics</h3>
+          <ul>
+            <li><a href="#" class="link-minimal">Overview</a></li>
+            <li><a href="#" class="link-minimal">Degrees and Majors</a></li>
+            <li><a href="#" class="link-minimal">Continuing Education</a></li>
+            <li><a href="#" class="link-minimal">Pollak Library</a></li>
+            <li><a href="#" class="link-minimal">Academic Advisement</a></li>
+            <li><a href="#" class="link-minimal">Course Catalog</a></li>
+          </ul>
+
+          <h4>Colleges</h4>
+          <ul>
+            <li><a href="#" class="link-minimal">The Arts</a></li>
+            <li><a href="#" class="link-minimal">Business and Economics</a></li>
+            <li><a href="#" class="link-minimal">Communications</a></li>
+            <li><a href="#" class="link-minimal">Education</a></li>
+            <li><a href="#" class="link-minimal">Engineering and Computer</a></li>
+            <li><a href="#" class="link-minimal">Sciences</a></li>
+            <li><a href="#" class="link-minimal">Health and Human</a></li>
+            <li><a href="#" class="link-minimal">Development</a></li>
+            <li><a href="#" class="link-minimal">Humanities and Social</a></li>
+            <li><a href="#" class="link-minimal">Sciences</a></li>
+            <li><a href="#" class="link-minimal">Natural Sciences and</a></li>
+            <li><a href="#" class="link-minimal">Mathematics</a></li>
+          </ul>
+        </div>
+        <div class="full-menu-left-column">
+          <h3>Admissions & Aid</h3>
+          <ul>
+            <li><a href="#" class="link-minimal">Overview</a></li>
+            <li><a href="#" class="link-minimal">Degrees and Majors</a></li>
+            <li><a href="#" class="link-minimal">Tuition</a></li>
+            <li><a href="#" class="link-minimal">Financial Aid</a></li>
+            <li><a href="#" class="link-minimal">For First-Time Freshmen</a></li>
+            <li><a href="#" class="link-minimal">For Transfer Students</a></li>
+            <li><a href="#" class="link-minimal">For Graduate Students</a></li>
+            <li><a href="#" class="link-minimal">For International Students</a></li>
+            <li><a href="#" class="link-minimal">Admissions and Records</a></li>
+            <li><a href="#" class="link-minimal">Outreach</a></li>
+            <li><a href="#" class="link-minimal">Campus Tour</a></li>
+          </ul>
+        </div>
+        <div class="full-menu-left-column">
+          <h3>Student Life</h3>
+          <ul>
+            <li><a href="#" class="link-minimal">Overview</a></li>
+            <li><a href="#" class="link-minimal">Living on Campus</a></li>
+            <li><a href="#" class="link-minimal">Financial Resources</a></li>
+            <li><a href="#" class="link-minimal">Academic Resources</a></li>
+            <li><a href="#" class="link-minimal">Student Services</a></li>
+            <li><a href="#" class="link-minimal">Health and Wellness</a></li>
+            <li><a href="#" class="link-minimal">Join a Club</a></li>
+          </ul>
+        </div>
+        <div class="full-menu-left-column">
+          <h3>About CSUF</h3>
+          <ul>
+            <li><a href="#" class="link-minimal">Overview</a></li>
+            <li><a href="#" class="link-minimal">Fast Facts</a></li>
+            <li><a href="#" class="link-minimal">Rankings</a></li>
+            <li><a href="#" class="link-minimal">Diversity, Equity and Inclusion</a></li>
+            <li><a href="#" class="link-minimal">CSUF News</a></li>
+            <li><a href="#" class="link-minimal">Campus Calendar</a></li>
+          </ul>
+
+          <h4>Divisions</h4>
+          <ul>
+            <li><a href="#" class="link-minimal">President’s Office</a></li>
+            <li><a href="#" class="link-minimal">Academic Affairs</a></li>
+            <li><a href="#" class="link-minimal">Administrations and Finance</a></li>
+            <li><a href="#" class="link-minimal">Information Technology</a></li>
+            <li><a href="#" class="link-minimal">Student Affairs</a></li>
+            <li><a href="#" class="link-minimal">University Advancement</a></li>
+          </ul>
+        </div>
+        <div class="full-menu-left-column">
+          <h3>Information For:</h3>
+          <ul>
+            <li><a href="#" class="link-minimal">Alumni</a></li>
+            <li><a href="#" class="link-minimal">Parents and Families</a></li>
+            <li><a href="#" class="link-minimal">Journalists</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="full-menu-right">
+        <h3>Getting Here</h3>
+        <ul>
+          <li><a href="#" class="link-minimal"><span class="material-icons text-titan-orange">place</span> Campus Map and Directions</a></li>
+          <li><a href="#" class="link-minimal"><span class="material-icons text-titan-orange">local_parking</span> Parking</a></li>
+          <li><a href="#" class="link-minimal"><span class="material-icons text-titan-orange">info</span> Visitor Center</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="#" class="link-minimal"><span class="icon-placeholder"></span> A-Z Index</a></li>
+          <li><a href="#" class="link-minimal"><span class="icon-placeholder"></span> Calendar</a></li>
+          <li><a href="#" class="link-minimal"><span class="icon-placeholder"></span> CSUF News</a></li>
+          <li><a href="#" class="link-minimal"><span class="icon-placeholder"></span> Career</a></li>
+          <li><a href="#" class="link-minimal"><span class="icon-placeholder"></span> Bookstore</a></li>
+        </ul>
+      </div>
+    </div>
   </header>
+  <!-- <div class="alert-site">
+    <span class="material-icons-outlined">info</span>
+    Latest coronavirus information and updates <a href="#">Learn More</a>
+  </div> -->
   <main id="main-content">
     
 
     <section class="banner height-80-viewport" style="background-image: url('http://news.fullerton.edu/app/uploads/2021/03/langsdorf-orange-groves-campus-beauty.jpeg');">
       <div class="banner-content text-white position-center-left">
-        <h2>Content</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt, nisi facilisis tempus blandit.</p>
-        <a href="#" class="button-rounded primary">Learn More <span class="material-icons">arrow_right</span></a>
+        <h2 class="text-white animate__animated animate__fadeInDown animate__delay-1s animate_slow">Content</h2>
+        <p class="animate__animated animate__fadeInDown animate__delay-3s animate_slow">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt, nisi facilisis tempus blandit.</p>
+        <a href="#" class="button-rounded white outline animate__animated animate__fadeInDown animate__delay-3s animate_slow">Learn More <span class="material-icons">arrow_right</span></a>
       </div>
       <div class="banner-overlay"></div>
     </section>
 
-    <div class="container">
+    <div class="container p-t-50 p-b-50">
+
+      <div class="row">
+        <div class="col-8 col-6-sm">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias perspiciatis similique eum nisi ipsum placeat eos voluptatibus soluta! Animi laborum cum velit hic architecto amet ullam molestiae eligendi veritatis! Voluptates.</p>
+        </div>
+        <div class="col-4 col-6-sm">
+          <aside>
+            <h3>Sidebar</h3>
+            <p>Sidebar content.</p>
+          </aside>
+        </div>
+      </div>
+
       <div class="js-accordion" data-accordion-prefix-classes="accordion">
         <div class="js-accordion__panel">
-          <h3 class="js-accordion__header">First tab</h3>
+          <h3 class="js-accordion__header">Do I have to accept admission to Cal State Fullerton before I apply for housing? Do I have to accept admission to Cal State Fullerton before I apply for housing?</h3>
           <p>
             here the content of 1st tab<br><br>
             <a href="#">pweet</a><br><br>
@@ -138,42 +282,179 @@
           plop
         </div>
        </div>
+
+
+       <div class="js-accordion accordion-simple" data-accordion-prefix-classes="accordion">
+        <div class="js-accordion__panel">
+          <h3 class="js-accordion__header">Do I have to accept admission to Cal State Fullerton before I apply for housing? Do I have to accept admission to Cal State Fullerton before I apply for housing?</h3>
+          <p>
+            here the content of 1st tab<br><br>
+            <a href="#">pweet</a><br><br>
+            plop
+          </p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem nisi laboriosam quibusdam. Exercitationem ut blanditiis, dolor cupiditate sit incidunt eligendi nesciunt molestiae eum quo possimus alias minima ullam dignissimos praesentium.</>
+        </div>
+       
+        <div class="js-accordion__panel">
+          <h2 class="js-accordion__header">Second tab</h2>
+          here the content of 2nd tab<br><br>
+          <a href="#">pweet</a><br><br>
+          plop
+        </div>
+       
+        <div class="js-accordion__panel">
+          <h2 class="js-accordion__header">Third tab</h2>
+          here the content of 3rd tab<br><br>
+          plop
+        </div>
+       
+        <div class="js-accordion__panel">
+          <h2 class="js-accordion__header">Fourth tab</h2>
+          here the content of 4th tab<br><br>
+          <a href="#">pweet</a><br><br>
+          plop
+        </div>
+       </div>
+    
+
+    <div class="info-block">
+      <ul class="titan-orange">
+        <li>The Center for Scholars staff have returned to campus and the Center is open as of August 2, 2021. We ask that before coming to the Center you review the current CSUF COVID-19 protocol </li>
+        <li>Please follow us on Instagram to stay up to date: Center for Scholars - @csufscholarsOpens in new window</li>
+        <li>Please visit the Our Team page for contact info. Please direct general inquiries to our department email scholars@fullerton.edu.</li>
+        <li>Scholar Resources & Support Info for information on how we are helping students and useful resources.</li>
+      </ul>
     </div>
 
-    <!-- <div class="container card-group card-margins background-titan-blue"> -->
-        <div class="card width-25">
-          <div class="card-image">
-            <img src="http://news.fullerton.edu/app/uploads/2021/06/50727651122_88cc00b61b_k-800x500.jpg" alt="" />
-          </div>
-          <div class="card-body">
-            <h2>Test Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
-          </div>
+    <div class="info-block">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, est. Provident tempore voluptates obcaecati quod dolores sapiente velit nemo asperiores consequatur, doloribus beatae cum, reprehenderit dolorem labore cupiditate ullam eos.</p>
+    </div>
+
+    <div class="row m-t-50 m-b-50">
+      <aside class="col-3 animate-on-scroll" data-animate="bounceIn" data-duration="1s" data-delay="0.25s">
+        <h3>Sidebar</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut blanditiis dolorum dolores ratione ut perferendis placeat atque ipsam facere ipsum. Aspernatur amet nobis ducimus laudantium ut distinctio provident eaque alias?</p>
+        <ul class="titan-orange">
+          <li>Sed iaculis purus in consequat egestas.</li>
+          <li>Suspendisse lacinia turpis sed odio rhoncus volutpat.</li>
+          <li>Vestibulum at ipsum viverra, mattis nisi et, facilisis augue.</li>
+          <li>Proin a magna id nunc sagittis molestie ornare sed mauris.</li>
+          <li>Nullam vestibulum risus eget elit hendrerit, ut cursus quam rutrum.</li>
+        </ul>
+      </aside>
+      <aside class="col-3 background-beige animate-on-scroll" data-animate="bounceIn" data-duration="1s" data-delay="0.3s">
+        <h3>Sidebar</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut blanditiis dolorum dolores ratione ut perferendis placeat atque ipsam facere ipsum. Aspernatur amet nobis ducimus laudantium ut distinctio provident eaque alias?</p>
+        <ul class="titan-orange">
+          <li>Sed iaculis purus in consequat egestas.</li>
+          <li>Suspendisse lacinia turpis sed odio rhoncus volutpat.</li>
+          <li>Vestibulum at ipsum viverra, mattis nisi et, facilisis augue.</li>
+          <li>Proin a magna id nunc sagittis molestie ornare sed mauris.</li>
+          <li>Nullam vestibulum risus eget elit hendrerit, ut cursus quam rutrum.</li>
+        </ul>
+      </aside>
+      <aside class="col-3 background-medium-blue text-white animate-on-scroll" data-animate="bounceIn" data-duration="1s" data-delay="0.35s">
+        <h3 class="text-white">Sidebar</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut blanditiis dolorum dolores ratione ut perferendis placeat atque ipsam facere ipsum. Aspernatur amet nobis ducimus laudantium ut distinctio provident eaque alias?</p>
+        <ul class="titan-orange">
+          <li>Sed iaculis purus in consequat egestas.</li>
+          <li>Suspendisse lacinia turpis sed odio rhoncus volutpat.</li>
+          <li>Vestibulum at ipsum viverra, mattis nisi et, facilisis augue.</li>
+          <li>Proin a magna id nunc sagittis molestie ornare sed mauris.</li>
+          <li>Nullam vestibulum risus eget elit hendrerit, ut cursus quam rutrum.</li>
+        </ul>
+      </aside>
+      <aside class="col-3 animate-on-scroll" data-animate="bounceIn" data-duration="1s" data-delay="0.4s">
+        <h3>Sidebar</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut blanditiis dolorum dolores ratione ut perferendis placeat atque ipsam facere ipsum. Aspernatur amet nobis ducimus laudantium ut distinctio provident eaque alias?</p>
+        <ul class="titan-orange">
+          <li>Sed iaculis purus in consequat egestas.</li>
+          <li>Suspendisse lacinia turpis sed odio rhoncus volutpat.</li>
+          <li>Vestibulum at ipsum viverra, mattis nisi et, facilisis augue.</li>
+          <li>Proin a magna id nunc sagittis molestie ornare sed mauris.</li>
+          <li>Nullam vestibulum risus eget elit hendrerit, ut cursus quam rutrum.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="row">
+      <div class="col-4 card animate-on-scroll" data-animate="fadeInDown">
+        <div class="card-image">
+          <img src="http://news.fullerton.edu/app/uploads/2021/06/50727651122_88cc00b61b_k-800x500.jpg" alt="" />
         </div>
-        <!-- <div class="card">
-          <div class="card-image">
-            <img src="http://news.fullerton.edu/app/uploads/2021/06/50727651122_88cc00b61b_k-800x500.jpg" alt="" />
-          </div>
-          <div class="card-body">
-            <h2>Test Title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
-          </div>
+        <div class="card-body">
+          <h2>Test Title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
         </div>
-        <div class="card">
-          <div class="card-image">
-            <img src="http://news.fullerton.edu/app/uploads/2021/06/Spring-Langsdorf-800x500.jpg" alt="" />
-          </div>
-          <div class="card-body">
-            <h3>Test Title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
-            <a href="#" class="button-rounded titan-blue">Button</a>
-          </div>
-        </div> -->
-    <!-- </div> -->
-    
-    <div class="container p-t-40 p-b-40">
+      </div>
+      <div class="col-4 card">
+        <div class="card-image">
+          <img src="http://news.fullerton.edu/app/uploads/2021/06/50727651122_88cc00b61b_k-800x500.jpg" alt="" />
+        </div>
+        <div class="card-body">
+          <h2>Test Title</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
+        </div>
+      </div>
+      <div class="col-4 card">
+        <div class="card-image p-t-10 p-r-10 p-b-0 p-l-10">
+          <img src="http://news.fullerton.edu/app/uploads/2021/06/Spring-Langsdorf-800x500.jpg" alt="" />
+        </div>
+        <div class="card-body">
+          <h3>Test Title</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
+          <a href="#" class="button-rounded titan-blue">Button</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 card background-image no-border">
+        <div class="card-image">
+          <img src="http://news.fullerton.edu/app/uploads/2021/06/50727651122_88cc00b61b_k-800x500.jpg" alt="" />
+        </div>
+        <div class="card-body text-center">
+          <h2 class="text-white m-t-100 m-b-100">Test Title</h2>
+        </div>
+      </div>
+      <div class="col-4 card background-image no-border border-radius-50 aspect-ratio-1">
+        <div class="card-image">
+          <img src="http://news.fullerton.edu/app/uploads/2021/06/50727651122_88cc00b61b_k-800x500.jpg" alt="" />
+        </div>
+        <div class="card-body text-center">
+          <h2 class="text-white m-t-100 m-b-100">Test Title</h2>
+        </div>
+      </div>
+      <div class="col-4 card background-image no-border">
+        <div class="card-image">
+          <img src="http://news.fullerton.edu/app/uploads/2021/06/50727651122_88cc00b61b_k-800x500.jpg" alt="" />
+        </div>
+        <div class="card-body text-center">
+          <h2 class="text-white m-t-100 m-b-100">Test Title</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 card no-border background-beige">
+        <div class="card-body text-center">
+          <h2 class="m-t-100 m-b-100">Test Title</h2>
+        </div>
+      </div>
+      <div class="col-4 card no-border background-medium-blue">
+        <div class="card-body text-center">
+          <span class="material-icons m-t-50 m-b-5 text-size-6xl text-titan-orange">place</span>
+          <h2 class="text-white m-t-0 m-b-50">Test Title</h2>
+        </div>
+      </div>
+      <div class="col-4 card">
+        <div class="card-body text-center">
+          <img src="https://i.pravatar.cc/150" class="m-t-50 m-b-10 border-radius-50 aspect-ratio-1" />
+          <h2 class="m-b-50">Test Title</h2>
+        </div>
+      </div>
+    </div>
+
 
       <p>
         <h2>Color Classes</h2>
@@ -283,6 +564,48 @@
         <li>List item four</li>
       </ul>
 
+      <ul class="titan-orange">
+        <li>Unordered List item one
+          <ul>
+            <li>Nested list item
+              <ul>
+                <li>Level 3, item one</li>
+                <li>Level 3, item two</li>
+                <li>Level 3, item three</li>
+                <li>Level 3, item four</li>
+              </ul>
+            </li>
+            <li>List item two</li>
+            <li>List item three</li>
+            <li>List item four</li>
+          </ul>
+        </li>
+        <li>List item two</li>
+        <li>List item three</li>
+        <li>List item four</li>
+      </ul>
+
+      <ul class="medium-blue">
+        <li>Unordered List item one
+          <ul>
+            <li>Nested list item
+              <ul>
+                <li>Level 3, item one</li>
+                <li>Level 3, item two</li>
+                <li>Level 3, item three</li>
+                <li>Level 3, item four</li>
+              </ul>
+            </li>
+            <li>List item two</li>
+            <li>List item three</li>
+            <li>List item four</li>
+          </ul>
+        </li>
+        <li>List item two</li>
+        <li>List item three</li>
+        <li>List item four</li>
+      </ul>
+
       <p>Fusce finibus condimentum ullamcorper. Aliquam eget lectus aliquet, dictum nisl ut, suscipit nunc. Nunc sed risus vitae nisl interdum consequat sed a ligula. Nullam tristique purus nec libero accumsan, non facilisis ligula feugiat. <a href="#">Etiam lobortis vestibulum lectus</a>, at rutrum tortor venenatis at. Cras at lectus finibus, lacinia purus sed, porttitor lacus. Nulla facilisi. Praesent eros sem, pulvinar vitae nisl vel, porttitor scelerisque ligula. Curabitur at est ornare, mattis ligula ac, bibendum eros.</p>
 
       <h3>Buttons</h3>
@@ -294,33 +617,15 @@
       </p>
 
       <p>
-        <a href="#" class="button outline">Default Button Outlined</a>
-        <a href="#" class="button-rounded outline">Rounded Button Outlined</a>
-        <a href="#" class="button-pill outline">Pill Button Outlined</a>
+        <a href="#" class="button blue">Default Button</a>
+        <a href="#" class="button-rounded blue">Rounded Button</a>
+        <a href="#" class="button-pill blue">Pill Button</a>
       </p>
 
       <p>
-        <a href="#" class="button titan-blue">Default Button</a>
-        <a href="#" class="button-rounded titan-blue">Rounded Button</a>
-        <a href="#" class="button-pill titan-blue">Pill Button</a>
-      </p>
-
-      <p>
-        <a href="#" class="button titan-blue outline">Default Button Outlined</a>
-        <a href="#" class="button-rounded titan-blue outline">Rounded Button Outlined</a>
-        <a href="#" class="button-pill titan-blue outline">Pill Button Outlined</a>
-      </p>
-
-      <p>
-        <a href="#" class="button medium-blue">Default Button</a>
-        <a href="#" class="button-rounded medium-blue">Rounded Button</a>
-        <a href="#" class="button-pill medium-blue">Pill Button</a>
-      </p>
-
-      <p>
-        <a href="#" class="button medium-blue outline">Default Button</a>
-        <a href="#" class="button-rounded medium-blue outline">Rounded Button</a>
-        <a href="#" class="button-pill medium-blue outline">Pill Button</a>
+        <a href="#" class="button blue outline">Default Button</a>
+        <a href="#" class="button-rounded blue outline">Rounded Button</a>
+        <a href="#" class="button-pill blue outline">Pill Button</a>
       </p>
 
       <p>
@@ -334,18 +639,6 @@
         <a href="#" class="button-rounded titan-orange outline">Rounded Button</a>
         <a href="#" class="button-pill titan-orange outline">Pill Button</a>
       </p>
-
-      <p>
-        <a href="#" class="button light-blue">Default Button</a>
-        <a href="#" class="button-rounded light-blue">Rounded Button</a>
-        <a href="#" class="button-pill light-blue">Pill Button</a>
-      </p>
-
-      <p>
-        <a href="#" class="button black">Default Button</a>
-        <a href="#" class="button-rounded black">Rounded Button</a>
-        <a href="#" class="button-pill black">Pill Button</a>
-      </p>
       
       <h3>Duis tempor purus sit amet magna pharetra vehicula.</h3>
 
@@ -356,9 +649,59 @@
         </p>
       </blockquote>
 
+      <blockquote class="pullquote">
+        <img class="pullquote-image" src="https://i.pravatar.cc/100" alt="Person" />
+        <p>This is a mult-line blockquote with a cite reference. People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick
+          carefully. I’m actually as proud of the things we haven’tdone as the things I have done. Innovation is saying no to 1,000 things.
+          <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite>
+        </p>
+      </blockquote>
+
       <p>Mauris vel turpis quis nunc tempus tempor sit amet at nisi. Quisque accumsan ultricies orci, pretium ultrices leo tristique quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Aliquam commodo consectetur diam</strong>, euismod iaculis odio tincidunt sed. Sed in tristique leo. Nulla pellentesque libero et mauris suscipit, ac dapibus sapien sollicitudin. Vivamus pharetra augue in vulputate porta. Quisque eu vehicula metus. Nulla facilisi. Praesent viverra nulla erat, a euismod elit convallis sit amet.</p>
 
-      <ol>
+      <ol class="numbered">
+        <li>List item one
+          <ol>
+            <li>List item one
+              <ol>
+                <li>List item one</li>
+                <li>List item two</li>
+                <li>List item three</li>
+                <li>List item four</li>
+              </ol>
+            </li>
+            <li>List item two</li>
+            <li>List item three</li>
+            <li>List item four</li>
+          </ol>
+        </li>
+        <li>List item two</li>
+        <li>List item three</li>
+        <li>List item four</li>
+      </ol>
+
+      <ol class="numbered titan-orange">
+        <li>List item one
+          <ol>
+            <li>List item one
+              <ol>
+                <li>List item one</li>
+                <li>List item two</li>
+                <li>List item three</li>
+                <li>List item four</li>
+              </ol>
+            </li>
+            <li>List item two</li>
+            <li>List item three</li>
+            <li>List item four</li>
+          </ol>
+        </li>
+        <li>List item two</li>
+        <li>List item three</li>
+        <li>List item four</li>
+      </ol>
+
+      <ol class="numbered medium-blue">
         <li>List item one
           <ol>
             <li>List item one
@@ -384,6 +727,68 @@
       <hr />
 
       <table>
+        <caption>Tables can have captions now.</caption>
+        <tbody>
+          <tr>
+            <th>Person</th>
+            <th>Number</th>
+            <th>Third Column</th>
+          </tr>
+          <tr>
+            <td>Someone Lastname</td>
+            <td>900</td>
+            <td>Nullam quis risus eget urna mollis ornare vel eu leo.</td>
+          </tr>
+          <tr>
+            <td><a href="#">Person Name</a></td>
+            <td>1200</td>
+            <td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td>
+          </tr>
+          <tr>
+            <td>Another Person</td>
+            <td>1500</td>
+            <td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
+          </tr>
+          <tr>
+            <td>Last One</td>
+            <td>2800</td>
+            <td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table-minimal">
+        <caption>Tables can have captions now.</caption>
+        <tbody>
+          <tr>
+            <th>Person</th>
+            <th>Number</th>
+            <th>Third Column</th>
+          </tr>
+          <tr>
+            <td>Someone Lastname</td>
+            <td>900</td>
+            <td>Nullam quis risus eget urna mollis ornare vel eu leo.</td>
+          </tr>
+          <tr>
+            <td><a href="#">Person Name</a></td>
+            <td>1200</td>
+            <td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td>
+          </tr>
+          <tr>
+            <td>Another Person</td>
+            <td>1500</td>
+            <td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
+          </tr>
+          <tr>
+            <td>Last One</td>
+            <td>2800</td>
+            <td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table-striped">
         <caption>Tables can have captions now.</caption>
         <tbody>
           <tr>
@@ -595,9 +1000,8 @@
         <h3>Heading</h3>
       </aside>
 
-      <!-- This card group has margins -->
-      <div class="card-group card-margins">
-        <div class="card">
+      <div class="row">
+        <div class="col-4 card">
           <div class="card-image">
             <img src="http://news.fullerton.edu/app/uploads/2021/06/50727651122_88cc00b61b_k-800x500.jpg" alt="">
           </div>
@@ -606,7 +1010,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
           </div>
         </div>
-        <div class="card">
+        <div class="col-4 card">
           <div class="card-image">
             <img src="http://news.fullerton.edu/app/uploads/2021/06/50727651122_88cc00b61b_k-800x500.jpg" alt="">
           </div>
@@ -615,7 +1019,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
           </div>
         </div>
-        <div class="card">
+        <div class="col-4 card">
           <div class="card-image">
             <img src="http://news.fullerton.edu/app/uploads/2021/06/50727651122_88cc00b61b_k-800x500.jpg" alt="">
           </div>
@@ -624,70 +1028,204 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae est quibusdam similique adipisci earum officiis asperiores ex. Quasi omnis explicabo sunt temporibus error non, doloremque laudantium tempore nobis soluta.</p>
           </div>
         </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-2"><img src="https://picsum.photos/200?random=1" alt=""></div>
+        <div class="col-2"><img src="https://picsum.photos/200?random=2" alt=""></div>
+        <div class="col-2"><img src="https://picsum.photos/200?random=3" alt=""></div>
+        <div class="col-2"><img src="https://picsum.photos/200?random=4" alt=""></div>
+        <div class="col-2"><img src="https://picsum.photos/200?random=5" alt=""></div>
+        <div class="col-2"><img src="https://picsum.photos/200?random=6" alt=""></div>
+      </div>
+      <div class="row">
+        <div class="col-2"><img src="https://picsum.photos/200?random=7" alt=""></div>
+        <div class="col-2"><img src="https://picsum.photos/200?random=8" alt=""></div>
+        <div class="col-2"><img src="https://picsum.photos/200?random=9" alt=""></div>
+        <div class="col-2"><img src="https://picsum.photos/200?random=10" alt=""></div>
+        <div class="col-2"><img src="https://picsum.photos/200?random=11" alt=""></div>
+        <div class="col-2"><img src="https://picsum.photos/200?random=12" alt=""></div>
       </div>
 
 
     </div>
+    <div class="container large">
+      <div class="row">
+        <div class="col-3"><img src="https://picsum.photos/400?random=13" alt=""></div>
+        <div class="col-3"><img src="https://picsum.photos/400?random=14" alt=""></div>
+        <div class="col-3"><img src="https://picsum.photos/400?random=15" alt=""></div>
+        <div class="col-3"><img src="https://picsum.photos/400?random=16" alt=""></div>
+      </div>
+      <div class="row">
+        <div class="col-3"><img src="https://picsum.photos/400?random=17" alt=""></div>
+        <div class="col-3"><img src="https://picsum.photos/400?random=18" alt=""></div>
+        <div class="col-3"><img src="https://picsum.photos/400?random=19" alt=""></div>
+        <div class="col-3"><img src="https://picsum.photos/400?random=20" alt=""></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2"><img src="https://picsum.photos/500?random=1" alt=""></div>
+      <div class="col-2"><img src="https://picsum.photos/500?random=2" alt=""></div>
+      <div class="col-2"><img src="https://picsum.photos/500?random=3" alt=""></div>
+      <div class="col-2"><img src="https://picsum.photos/500?random=4" alt=""></div>
+      <div class="col-2"><img src="https://picsum.photos/500?random=5" alt=""></div>
+      <div class="col-2"><img src="https://picsum.photos/500?random=6" alt=""></div>
+    </div>
+    <div class="row">
+      <div class="col-2"><img src="https://picsum.photos/500?random=7" alt=""></div>
+      <div class="col-2"><img src="https://picsum.photos/500?random=8" alt=""></div>
+      <div class="col-2"><img src="https://picsum.photos/500?random=9" alt=""></div>
+      <div class="col-2"><img src="https://picsum.photos/500?random=10" alt=""></div>
+      <div class="col-2"><img src="https://picsum.photos/500?random=11" alt=""></div>
+      <div class="col-2"><img src="https://picsum.photos/500?random=12" alt=""></div>
+    </div>
+
   </main>
   <footer id="site-footer">
+    <div class="footer-top-bar"><span class="footer-orange-span"></span></div>
     <div class="container">
-      <div class="footer-top">
 
-        <a href="http://fullerton.edu" class="csuf-logo no-border float-left m-r-50"><img src="./_assets/images/csuf-logo.svg" alt="California State University, Fullerton" class="display-block" /></a>
+      <h2 class="hidden">Site Footer</h2>
 
-        <p class="p-t-5 m-b-0">
-          This site is maintained by University Advancement.<br />
-          To report problems or comments with this site, please contact <a href="mailto:stratcomm@fullerton.edu" class="link-minimal">stratcomm@fullerton.edu</a>.<br />
-          &copy; California State University, Fullerton. All Rights Reserved.
-        </p>
+      <div class="row">
+        <div class="col-3">
 
-      </div>
-      <div class="footer-bottom web-accessibility">
+          <a href="http://fullerton.edu" class="csuf-logo m-b-15 display-block"><img src="./_assets/images/csuf-logo-reversed.svg" alt="California State University, Fullerton" class="display-block" /></a>
 
-        <h2>Web Accessibility</h2>
+          <p class="m-b-10">800 N. State College Blvd.<br />Fullerton, CA 92831-3599</p>
 
-        <p>CSUF is committed to ensuring equal accessibility to our users. Let us know about any accessibility problems you encounter using this website.<br />
-        We’ll do our best to improve things and get you the information you need.</p>
+          <p class="m-b-10">657-278-2011</p>
 
-        <div class="resources-container">
-          <h3 class="resources-heading float-left m-r-10">Resources:</h3>
-          <ul class="resources-list float-left">
-            <li><a href="https://get.adobe.com/reader/">Adobe Reader</a></li>
-            <li><a href="https://www.microsoft.com/en-us/download/office.aspx">Microsoft Viewers</a></li>
-            <li><a href="http://www.fullerton.edu/reportati/">Report An ATI Issue</a></li>
-            <li><a href="http://www.fullerton.edu/ati/">Accessible @ CSUF</a></li>
-          </ul>
+          <!-- <ul class="social-list width-50">
+            <li><a href="#" class="link-minimal"><img src="./_assets/images/facebook.svg" alt="Facebook" /></a></li>
+            <li><a href="#" class="link-minimal"><img src="./_assets/images/twitter.svg" alt="Twitter" /></a></li>
+            <li><a href="#" class="link-minimal"><img src="./_assets/images/instagram.svg" alt="Instagram" /></a></li>
+            <li><a href="#" class="link-minimal"><img src="./_assets/images/linkedin.svg" alt="LinkedIn" /></a></li>
+            <li><a href="#" class="link-minimal"><img src="./_assets/images/youtube.svg" alt="YouTube" /></a></li>
+          </ul> -->
+
+          
         </div>
+        <div class="col-9">
+          <p>This site is maintained by University Advancement. To report problems or comments with this site, please contact <a href="mailto:stratcomm@fullerton.edu" class="link-minimal">stratcomm@fullerton.edu</a>.</p>
 
+          <h3>Web Accessibility</h3>
+          <p>CSUF is committed to ensuring equal accessibility to our users. Let us know about any accessibility problems you encounter using this website. We’ll do our best to improve things and get you the information you need.</p>
+
+          <p>Resources: <a href="#" class="link-minimal">Adobe Reader</a>&nbsp;&nbsp;&nbsp;<a href="#" class="link-minimal">Microsoft Viewers</a>&nbsp;&nbsp;&nbsp;<a href="#" class="link-minimal">Report An ATI Issue</a>&nbsp;&nbsp;&nbsp;<a href="#" class="link-minimal">Accessible @ CSUF</a></p>
+        </div>
+        <!-- <div class="col-4">
+          <h3>Colleges</h3>
+
+          <ul>
+            <li><a class="link-minimal" href="http://www.fullerton.edu/arts/">The Arts</a></li>
+            <li><a class="link-minimal" href="http://business.fullerton.edu">Business and Economics</a></li>
+            <li><a class="link-minimal" href="http://communications.fullerton.edu">Communications</a></li>
+            <li><a class="link-minimal" href="http://ed.fullerton.edu">Education</a></li>
+            <li><a class="link-minimal" href="http://www.fullerton.edu/ecs">Engineering and Computer Science</a></li>
+            <li><a class="link-minimal" href="http://hhd.fullerton.edu">Health and Human Development</a></li>
+            <li><a class="link-minimal" href="http://hss.fullerton.edu">Humanities and Social Sciences</a></li>
+            <li><a class="link-minimal" href="http://nsm.fullerton.edu">Natural Sciences and Mathematics</a></li>
+            <li><a class="link-minimal" href="http://extension.fullerton.edu/">Extension and International Programs</a></li>
+          </ul>
+
+        </div>
+        <div class="col-4">
+          <h3>Resources</h3>
+
+          <ul>
+            <li><a class="link-minimal" href="#">University Police</a></li>
+            <li><a class="link-minimal" href="#">Emergency Information</a></li>
+            <li><a class="link-minimal" href="#">Annual Security Report (Clery)</a></li>
+            <li><a class="link-minimal" href="#">California Campus Safety Plan</a></li>
+            <li><a class="link-minimal" href="#">Title IX</a></li>
+            <li><a class="link-minimal" href="#">Site Index</a></li>
+            <li><a class="link-minimal" href="#">Campus Map</a></li>
+            <li><a class="link-minimal" href="#">CSU</a></li>
+            <li><a class="link-minimal" href="#">Accessibility</a></li>
+            <li><a class="link-minimal" href="#">Contact Us</a></li>
+          </ul>
+
+        </div> -->
+      </div>
+    </div>
+    <div class="footer-copyright p-15">
+      <div class="container text-center text-size-xs">
+        <p class="m-0">&copy;<span id="copyright-year"></span> California State University, Fullerton. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
   <div id="search-container" class="position-fixed hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="search-container-header">
-    <div class="search-header p-25">
+    <div class="search-header">
       <h2 id="search-container-header" class="hidden">Search</h2>
       <button id="close-search-container" class="float-right text-size-xs no-border"><span class="material-icons">close</span> Close Window</button>
-      <form id="search-form" class="clear display-inline-block width-50 p-r-25 m-r-25">
-        <fieldset class="display-flex m-b-10 m-l-75">
-          <legend class="hidden">Search Type</legend>
-          <label class="m-r-10"><input type="radio" name="search-type" value="site" checked /> Search Site</label>
-          <label class="m-r-10"><input type="radio" name="search-type" value="csuf" /> Search All CSUF</label>
-          <label class="m-r-10"><input type="radio" name="search-type" value="ituffy" /> Ask Tuffy</label>
-          <label class="m-r-10"><input type="radio" name="search-type" value="directory" /> Search Directory</label>
-        </fieldset>
 
-        <label for="search-term" id="search-term-label" class="display-inline-block text-size-md m-r-20">Search</label>
-        <input type="text" id="search-term" name="search-term" title="Enter search terms" class="display-inline-block width-75" />
+      <fieldset class="display-flex" id="search-type-container">
+        <legend>Search Type</legend>
+        <label>
+          <input type="radio" name="search-type" value="site" checked />
+          <span class="radio-text"><span class="material-icons">star</span>This Site Only</span>
+        </label>
+        <label>
+          <input type="radio" name="search-type" value="csuf" />
+          <span class="radio-text"><span class="material-icons">public</span> All of Fullerton.edu</span>
+        </label>
+        <label>
+          <input type="radio" name="search-type" value="people" />
+          <span class="radio-text"><span class="material-icons">people</span> People</span>
+        </label>
+        <label>
+          <input type="radio" name="search-type" value="ituffy" />
+          <span class="radio-text">iTuffy <span class="material-icons">open_in_new</span></span>
+        </label>
+      </fieldset>
 
-        <button type="submit" id="search-submit" class="display-inline-block"><span class="material-icons">search</span></button>
-      </form>
-      <a href="#" class="button">Quick Links</a>
-      <a href="#" class="button">A-Z Index</a>
+
+      <!-- <label for="search-term" id="search-term-label" class="display-inline-block text-size-md m-r-20">Search</label>
+      <input type="text" id="search-term" name="search-term" title="Enter search terms" class="display-inline-block width-75" /> -->
+
+      <div id="site-search-field" class="search-field-container">
+        <div class="gcse-searchbox" data-as_sitesearch="http://news.fullerton.edu" data-gname="sitesearch"></div>
+      </div>
+
+      <div id="csuf-search-field" class="hidden search-field-container">
+        <div class="gcse-searchbox" data-gname="csufsearch"></div>
+      </div>
+
+      <div id="people-search-field" class="hidden search-field-container">
+        <form id="people-search-form" name="people-search-form" class="display-flex">
+          <label for="search-term" id="search-term-label" class="hidden">Search People</label>
+          <input type="text" id="people-search-term" name="people-search-term" title="Enter Name, department, location, or campus phone number" placeholder="Name, department, location, or campus phone number" class="display-block" />
+          <input class="button-rounded medium-blue" type="submit" name="submit" value="Search">
+        </form>
+      </div>
+
+        <!-- <button type="submit" id="search-submit" class="display-inline-block"><span class="material-icons">search</span></button> -->
+
+      <!-- <a href="#" class="button">Quick Links</a> -->
+      <!-- <a href="#" class="button">A-Z Index</a> -->
     </div>
-    <div class="search-results p-25">
-      <p>Search results display here</p>
+    <div class="search-results">
+
+      <div id="site-search-results" class="search-results-container">
+        <div class="gcse-searchresults" data-gname="sitesearch"></div>
+      </div>
+
+      <div id="csuf-search-results" class="search-results-container hidden">
+        <div class="gcse-searchresults" data-gname="csufsearch"></div>
+      </div>
+
+      <div id="people-search-results" class="search-results-container hidden">
+        <!-- <ul id="people-search-results-container"></ul> -->
+      </div>
+
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="//cse.google.com/cse.js?cx=003297517689816257862:da3id2041ie"></script>
   <script src="./_assets/bundle.js"></script>
   <noscript style="background-color: white; color: black;">Some page features may require javascript to run.</noscript>
 </body>

@@ -2,10 +2,38 @@ html,
 body {
 	margin: 0 !important;
 	padding:0; 
-  background-color: #ffffff;
-  color: $text;
 	font-family: $body_font;
+  // font-size: $base-font-size;
   font-size: $base-font-size;
+  font-weight: 300;
+  background-color: var(--background);
+  color: var(--text);
+  @media (max-width: 1500px) {
+    font-size: calc(#{$base-font-size} - .25vw);
+  }
+  @include breakpoint(mobile) {
+    padding-bottom: 25px;
+    font-size: calc(#{$base-font-size} - .5vw);
+  }
+}
+
+body.screen-tint:after {
+  position: fixed;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.4);
+  z-index: 98;
+  opacity: 0;
+  animation: opacity 1s forwards;
+}
+
+@keyframes opacity {
+  100% {
+    opacity: 1;
+  }
 }
 
 #skip-nav {

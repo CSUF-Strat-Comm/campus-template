@@ -1,8 +1,11 @@
 aside {
   border: 1px solid #ccc;
-  color: #000;
+  color: var(--text);
   margin-bottom: 1.5rem;
   padding: 1rem;
+  @include darkmode() {
+    border-color: #4e555e;
+  }
   h1, h2, h3,
   h4, h5, h6 {
     border-top: 1px solid #ccc;
@@ -12,11 +15,15 @@ aside {
     margin-right: -1rem;
     font-size: $text-size-md;
     text-align: center;
-    text-transform: uppercase;
+    // text-transform: uppercase;
+    color: var(--text);
+    @include darkmode() {
+      border-color: #4e555e;
+    }
     &:after {
       content: '';
       display: block;
-      background-color: #FF5443;
+      background-color: var(--titan-orange);
       margin: 7px auto 0;
       height: 5px;
       width: 80px;

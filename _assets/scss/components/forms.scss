@@ -33,17 +33,26 @@ select {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   background-color: #f7f7f7;
-  color: $text;
+  color: var(--text);
   font-size: $text-size-md;
   &:focus {
     background-color: #EFEDE6;
   }
+  @include darkmode() {
+    background-color: #3c4148;
+    border-color: #4e555e;
+  }
   &.error {
-    border-color: $error;
+    border-color: var(--error);
     background-color: lighten($error, 60%);
-    color: $error;
+    color: var(--error);
     &:focus {
-      outline-color: $error;
+      outline-color: var(--error);
+    }
+    @include darkmode() {
+      color: white;
+      background-color: #3c0b00;
+      border-color: #66281b;
     }
   }
 }
@@ -72,7 +81,7 @@ label {
   font-size: $text-size-sm;
   line-height: 1em;
   &.error {
-    color: $error;
+    color: var(--error);
     font-weight: 600;
   }
 }

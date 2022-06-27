@@ -60,3 +60,11 @@
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
+
+@mixin darkmode() {
+
+	// Prints a media query based on the value
+	html[data-theme='dark'] & {
+		@content;
+	}
+}

@@ -1,33 +1,37 @@
 /*-----FOOTER------*/
 footer#site-footer {
-	background: #fefefe;
-	border-top: 5px solid $titan_orange;
-	padding: 2rem 0;
+	background: var(--titan-blue);
+	// border-top: 5px solid $titan_orange;
+	
+	color: white;
 	font-size: $text-size-xs;
 	@include breakpoint(mobile) {
 		text-align: center;
 	}
 
-	.footer-top {
-		margin-bottom: 1.5rem;
+	.link-minimal {
+		color: white;
+	}
+
+	.footer-top-bar {
+		height: 5px;
+		background: $medium_blue;
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 3rem;
+		.footer-orange-span {
+			background: $titan_orange;
+			display: block;
+			width: 30%;
+			height: 5px;
+			float: right;
+			transform: skewX(300deg);
+			margin-right: -5px;
+		}
 	}
 
 	.csuf-logo {
-		width: 225px;
-		@extend .position-relative;
-		&:after {
-			content: '';
-			width: 1px;
-			height: 100%;
-			background: #ccc;
-			display: block;
-			position: absolute;
-			right: -25px;
-			top: 0;
-			@include breakpoint(mobile) {
-				display: none;
-			}
-		}
+		width: 200px;
 		@include breakpoint(mobile) {
 			max-width: 50%;
 			float: none;
@@ -36,39 +40,50 @@ footer#site-footer {
 		}
 	}
 
-	h1, h2, h3,
-	h4, h5, h6 {
-		font-size: $text-size-xs;
-		margin-bottom: .25rem;
-	}
-
-	.resources-heading {
-		font-weight: 400;
-		@include breakpoint(mobile) {
-			float: none;
-			font-weight: 600;
-		}
-	}
-
-	.resources-list {
+	.social-list {
 		list-style: none;
-		margin: 0;
+		margin: 1rem 0;
 		padding: 0;
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
 		@include breakpoint(mobile) {
-			float: none;
+			margin: 1rem auto;
+		}
+		a {
+			display: block;
 		}
 		li {
-			@extend .display-inline-block;
-			@extend .m-l-5;
-			@extend .m-r-5;
-			@include breakpoint(mobile) {
-				display: block !important;
-				text-align: center;
-				margin: 10px 0 !important;
-			}
-			a {
-				@extend .link-minimal;
-			}
+			// display: inline-block;
+			// vertical-align: middle;
+		}
+		img {
+			width: 1rem;
+			height: 1rem;
+			display: block;
+		}
+	}
+
+	ul:not(.social-list) {
+		@include breakpoint(mobile) {
+			list-style: none;
+			padding: 0;
+		}
+	}
+
+	h1, h2, h3,
+	h4, h5, h6 {
+		font-size: $text-size-sm;
+		text-transform: uppercase;
+		font-family: $sans-serif-font;
+		margin-bottom: .5rem;
+	}
+
+	.footer-copyright {
+		margin-top: 3rem;
+		background-color: #001c3e;
+		@include darkmode() {
+			background-color: #172638;
 		}
 	}
 

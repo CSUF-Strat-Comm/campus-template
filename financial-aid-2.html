@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Aid Example</title>
+  <link rel="stylesheet"  href="./_assets/main.css" type="text/css" media="all" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#00274c">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#00274c">
+
+</head>
+<body>
+  <div id="skip-nav">
+		<a href="#main-content">Skip to Content (Press Enter)</a>
+	</div>
+  <!-- <div class="alert-campus">
+    <span class="material-icons-round">warning_amber</span>
+    Campus closure due to severe storm and flooding in area. <a href="#">Learn More</a>
+  </div> -->
+  <header id="site-header">
+    
+    <div class="header-top">
+
+      <a href="http://fullerton.edu/" title="Cal State Fullerton Homepage" id="global-branding"></a>
+
+      <nav id="global-nav" aria-label="University">
+        <ul>
+          <li>
+            <a class="link-minimal" href="https://my.fullerton.edu/"><span class="material-icons text-titan-orange" role="img" aria-hidden="true">lock</span> Portal Login</a>
+          </li>
+          <li>
+            <button id="full-menu-toggle" type="button" aria-expanded="false" aria-controls="full-menu" title="Show/Hide Full Menu" class="button-minimal">Resources <span class="material-icons text-size-sm" role="img" aria-hidden="true">arrow_drop_down</span></button>
+          </li>
+          <li>
+            <button class="search-button" type="button" id="open-search-container" aria-expanded="false" aria-controls="search-container" title="Show/Hide Search">
+              <span class="search-button-text">Search</span>
+              <span class="material-icons" role="img" aria-hidden="true">search</span>
+            </button>
+          </li>
+          <li>
+            <label class="theme-toggle" title="Toggle theme">
+              <input type="checkbox" id="theme-toggle" name="theme" aria-label="Toggle Light/Dark Theme"  />
+              <span class="slider round"></span>
+            </label>
+          </li>
+        </ul>
+      </nav>
+      
+    </div>
+    <div class="site-branding">
+      <a href="#" class="site-name no-border">Financial Aid</a>
+    </div>
+    <nav id="main-nav" class="p-r-15 p-l-15" aria-label="Main">
+
+      <button class="hamburger hamburger--elastic" id="mobile-menu-toggle" type="button" aria-hidden="true" aria-disabled="true" disabled aria-expanded="false" aria-controls="main-nav-list">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+        <span class="hamburger-text">Menu</span>
+      </button>
+
+      <ul class="main-nav-list" id="main-nav-list">
+        <li><a href="#">Undergraduate</a></li>
+        <li><a href="#">Credential</a></li>
+        <li><a href="#">Graduate</a></li>
+        <li><a href="#">Special Groups</a></li>
+        <li><a href="#">Summer</a></li>
+        <li><a href="#">Forms and Appeals</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      
+    </nav>
+    <div id="full-menu" aria-labelledby="full-menu-label">
+      <h2 id="full-menu-label" class="hidden">Full Menu</h2>
+      <div class="full-menu-left">
+
+        <div class="full-menu-left-column">
+          <h3>Academics</h3>
+          <ul>
+            <li><a href="#" class="link-minimal">Overview</a></li>
+            <li><a href="#" class="link-minimal">Degrees and Majors</a></li>
+            <li><a href="#" class="link-minimal">Continuing Education</a></li>
+            <li><a href="#" class="link-minimal">Pollak Library</a></li>
+            <li><a href="#" class="link-minimal">Academic Advisement</a></li>
+            <li><a href="#" class="link-minimal">Course Catalog</a></li>
+          </ul>
+
+          <h4>Colleges</h4>
+          <ul>
+            <li><a href="#" class="link-minimal">The Arts</a></li>
+            <li><a href="#" class="link-minimal">Business and Economics</a></li>
+            <li><a href="#" class="link-minimal">Communications</a></li>
+            <li><a href="#" class="link-minimal">Education</a></li>
+            <li><a href="#" class="link-minimal">Engineering and Computer</a></li>
+            <li><a href="#" class="link-minimal">Sciences</a></li>
+            <li><a href="#" class="link-minimal">Health and Human</a></li>
+            <li><a href="#" class="link-minimal">Development</a></li>
+            <li><a href="#" class="link-minimal">Humanities and Social</a></li>
+            <li><a href="#" class="link-minimal">Sciences</a></li>
+            <li><a href="#" class="link-minimal">Natural Sciences and</a></li>
+            <li><a href="#" class="link-minimal">Mathematics</a></li>
+          </ul>
+        </div>
+        <div class="full-menu-left-column">
+          <h3>Admissions & Aid</h3>
+          <ul>
+            <li><a href="#" class="link-minimal">Overview</a></li>
+            <li><a href="#" class="link-minimal">Degrees and Majors</a></li>
+            <li><a href="#" class="link-minimal">Tuition</a></li>
+            <li><a href="#" class="link-minimal">Financial Aid</a></li>
+            <li><a href="#" class="link-minimal">For First-Time Freshmen</a></li>
+            <li><a href="#" class="link-minimal">For Transfer Students</a></li>
+            <li><a href="#" class="link-minimal">For Graduate Students</a></li>
+            <li><a href="#" class="link-minimal">For International Students</a></li>
+            <li><a href="#" class="link-minimal">Admissions and Records</a></li>
+            <li><a href="#" class="link-minimal">Outreach</a></li>
+            <li><a href="#" class="link-minimal">Campus Tour</a></li>
+          </ul>
+        </div>
+        <div class="full-menu-left-column">
+          <h3>Student Life</h3>
+          <ul>
+            <li><a href="#" class="link-minimal">Overview</a></li>
+            <li><a href="#" class="link-minimal">Living on Campus</a></li>
+            <li><a href="#" class="link-minimal">Financial Resources</a></li>
+            <li><a href="#" class="link-minimal">Academic Resources</a></li>
+            <li><a href="#" class="link-minimal">Student Services</a></li>
+            <li><a href="#" class="link-minimal">Health and Wellness</a></li>
+            <li><a href="#" class="link-minimal">Join a Club</a></li>
+          </ul>
+        </div>
+        <div class="full-menu-left-column">
+          <h3>About CSUF</h3>
+          <ul>
+            <li><a href="#" class="link-minimal">Overview</a></li>
+            <li><a href="#" class="link-minimal">Fast Facts</a></li>
+            <li><a href="#" class="link-minimal">Rankings</a></li>
+            <li><a href="#" class="link-minimal">Diversity, Equity and Inclusion</a></li>
+            <li><a href="#" class="link-minimal">CSUF News</a></li>
+            <li><a href="#" class="link-minimal">Campus Calendar</a></li>
+          </ul>
+
+          <h4>Divisions</h4>
+          <ul>
+            <li><a href="#" class="link-minimal">President’s Office</a></li>
+            <li><a href="#" class="link-minimal">Academic Affairs</a></li>
+            <li><a href="#" class="link-minimal">Administrations and Finance</a></li>
+            <li><a href="#" class="link-minimal">Information Technology</a></li>
+            <li><a href="#" class="link-minimal">Student Affairs</a></li>
+            <li><a href="#" class="link-minimal">University Advancement</a></li>
+          </ul>
+        </div>
+        <div class="full-menu-left-column">
+          <h3>Information For:</h3>
+          <ul>
+            <li><a href="#" class="link-minimal">Alumni</a></li>
+            <li><a href="#" class="link-minimal">Parents and Families</a></li>
+            <li><a href="#" class="link-minimal">Journalists</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="full-menu-right">
+        <h3>Getting Here</h3>
+        <ul>
+          <li><a href="#" class="link-minimal"><span class="material-icons text-titan-orange">place</span> Campus Map and Directions</a></li>
+          <li><a href="#" class="link-minimal"><span class="material-icons text-titan-orange">local_parking</span> Parking</a></li>
+          <li><a href="#" class="link-minimal"><span class="material-icons text-titan-orange">info</span> Visitor Center</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="#" class="link-minimal"><span class="icon-placeholder"></span> A-Z Index</a></li>
+          <li><a href="#" class="link-minimal"><span class="icon-placeholder"></span> Calendar</a></li>
+          <li><a href="#" class="link-minimal"><span class="icon-placeholder"></span> CSUF News</a></li>
+          <li><a href="#" class="link-minimal"><span class="icon-placeholder"></span> Career</a></li>
+          <li><a href="#" class="link-minimal"><span class="icon-placeholder"></span> Bookstore</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- <div class="alert-site">
+    <span class="material-icons-outlined">info</span>
+    Latest coronavirus information and updates <a href="#">Learn More</a>
+  </div> -->
+  <main id="main-content">
+
+    <section class="container p-t-50 p-b-50">
+      <h1>Applying for Financial Aid</h1>
+
+      <p>We recommend all students to follow the timeline to complete their financial aid application and to monitor their email for further information. Make sure to complete your application to maximize your financial aid eligibility by <strong>March 2nd of every year as it is the priority deadline</strong>.</p>
+
+      <p>We also recommend those who are thinking of attending graduates programs, but are unsure when to complete the financial aid application as well by <strong>March 2nd</strong>, as financial aid institutional resource eligibility can be different between universities.</p>
+
+      <p>An overview of the timeline is below, please click on the specific links under Applying for Aid to get detailed information on the <a href="#">FAFSA</a> or <a href="#">Dream Act</a> application.</p>
+
+
+     <div class="alert-notice m-b-100"><p class="font-weight-500">CSUF School Code: 001137</p></div>
+
+     <h2>2022-2023 California Dream Act (CDA)/FAFSA Workshop 
+      Dates for Fall 2021:</h2>
+
+      <table class="table-minimal">
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Register</th>
+        </tr>
+        <tr>
+          <td>Fri: 10/1/2021</td>
+          <td>11:00am - 12:30pm</td>
+          <td>
+            <a href="#" class="button-rounded medium-blue">Current Students</a><br />
+            <a href="#" class="button-rounded medium-blue">Prospective Students</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Fri: 10/1/2021</td>
+          <td>11:00am - 12:30pm</td>
+          <td>
+            <a href="#" class="button-rounded medium-blue">Current Students</a><br />
+            <a href="#" class="button-rounded medium-blue">Prospective Students</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Fri: 10/1/2021</td>
+          <td>11:00am - 12:30pm</td>
+          <td>
+            <a href="#" class="button-rounded medium-blue">Current Students</a><br />
+            <a href="#" class="button-rounded medium-blue">Prospective Students</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Fri: 10/1/2021</td>
+          <td>11:00am - 12:30pm</td>
+          <td>
+            <a href="#" class="button-rounded medium-blue">Current Students</a><br />
+            <a href="#" class="button-rounded medium-blue">Prospective Students</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Fri: 10/1/2021</td>
+          <td>11:00am - 12:30pm</td>
+          <td>
+            <a href="#" class="button-rounded medium-blue">Current Students</a><br />
+            <a href="#" class="button-rounded medium-blue">Prospective Students</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Fri: 10/1/2021</td>
+          <td>11:00am - 12:30pm</td>
+          <td>
+            <a href="#" class="button-rounded medium-blue">Current Students</a><br />
+            <a href="#" class="button-rounded medium-blue">Prospective Students</a>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+  <footer id="site-footer">
+    <div class="footer-top-bar"><span class="footer-orange-span"></span></div>
+    <div class="container">
+
+      <h2 class="hidden">Site Footer</h2>
+
+      <div class="row">
+        <div class="col-3">
+
+          <a href="http://fullerton.edu" class="csuf-logo m-b-15 display-block"><img src="./_assets/images/csuf-logo-reversed.svg" alt="California State University, Fullerton" class="display-block" /></a>
+
+          <p class="m-b-10">800 N. State College Blvd.<br />Fullerton, CA 92831-3599</p>
+
+          <p class="m-b-10">657-278-2011</p>
+
+          <!-- <ul class="social-list width-50">
+            <li><a href="#" class="link-minimal"><img src="./_assets/images/facebook.svg" alt="Facebook" /></a></li>
+            <li><a href="#" class="link-minimal"><img src="./_assets/images/twitter.svg" alt="Twitter" /></a></li>
+            <li><a href="#" class="link-minimal"><img src="./_assets/images/instagram.svg" alt="Instagram" /></a></li>
+            <li><a href="#" class="link-minimal"><img src="./_assets/images/linkedin.svg" alt="LinkedIn" /></a></li>
+            <li><a href="#" class="link-minimal"><img src="./_assets/images/youtube.svg" alt="YouTube" /></a></li>
+          </ul> -->
+
+          
+        </div>
+        <div class="col-9">
+          <p>This site is maintained by University Advancement. To report problems or comments with this site, please contact <a href="mailto:stratcomm@fullerton.edu" class="link-minimal">stratcomm@fullerton.edu</a>.</p>
+
+          <h3>Web Accessibility</h3>
+          <p>CSUF is committed to ensuring equal accessibility to our users. Let us know about any accessibility problems you encounter using this website. We’ll do our best to improve things and get you the information you need.</p>
+
+          <p>Resources: <a href="#" class="link-minimal">Adobe Reader</a>&nbsp;&nbsp;&nbsp;<a href="#" class="link-minimal">Microsoft Viewers</a>&nbsp;&nbsp;&nbsp;<a href="#" class="link-minimal">Report An ATI Issue</a>&nbsp;&nbsp;&nbsp;<a href="#" class="link-minimal">Accessible @ CSUF</a></p>
+        </div>
+        <!-- <div class="col-4">
+          <h3>Colleges</h3>
+
+          <ul>
+            <li><a class="link-minimal" href="http://www.fullerton.edu/arts/">The Arts</a></li>
+            <li><a class="link-minimal" href="http://business.fullerton.edu">Business and Economics</a></li>
+            <li><a class="link-minimal" href="http://communications.fullerton.edu">Communications</a></li>
+            <li><a class="link-minimal" href="http://ed.fullerton.edu">Education</a></li>
+            <li><a class="link-minimal" href="http://www.fullerton.edu/ecs">Engineering and Computer Science</a></li>
+            <li><a class="link-minimal" href="http://hhd.fullerton.edu">Health and Human Development</a></li>
+            <li><a class="link-minimal" href="http://hss.fullerton.edu">Humanities and Social Sciences</a></li>
+            <li><a class="link-minimal" href="http://nsm.fullerton.edu">Natural Sciences and Mathematics</a></li>
+            <li><a class="link-minimal" href="http://extension.fullerton.edu/">Extension and International Programs</a></li>
+          </ul>
+
+        </div>
+        <div class="col-4">
+          <h3>Resources</h3>
+
+          <ul>
+            <li><a class="link-minimal" href="#">University Police</a></li>
+            <li><a class="link-minimal" href="#">Emergency Information</a></li>
+            <li><a class="link-minimal" href="#">Annual Security Report (Clery)</a></li>
+            <li><a class="link-minimal" href="#">California Campus Safety Plan</a></li>
+            <li><a class="link-minimal" href="#">Title IX</a></li>
+            <li><a class="link-minimal" href="#">Site Index</a></li>
+            <li><a class="link-minimal" href="#">Campus Map</a></li>
+            <li><a class="link-minimal" href="#">CSU</a></li>
+            <li><a class="link-minimal" href="#">Accessibility</a></li>
+            <li><a class="link-minimal" href="#">Contact Us</a></li>
+          </ul>
+
+        </div> -->
+      </div>
+    </div>
+    <div class="footer-copyright p-15">
+      <div class="container text-center text-size-xs">
+        <p class="m-0">&copy;<span id="copyright-year"></span> California State University, Fullerton. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <div id="search-container" class="position-fixed hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="search-container-header">
+    <div class="search-header">
+      <h2 id="search-container-header" class="hidden">Search</h2>
+      <button id="close-search-container" class="float-right text-size-xs no-border"><span class="material-icons">close</span> Close Window</button>
+
+      <fieldset class="display-flex" id="search-type-container">
+        <legend>Search Type</legend>
+        <label>
+          <input type="radio" name="search-type" value="site" checked />
+          <span class="radio-text"><span class="material-icons">star</span>This Site Only</span>
+        </label>
+        <label>
+          <input type="radio" name="search-type" value="csuf" />
+          <span class="radio-text"><span class="material-icons">public</span> All of Fullerton.edu</span>
+        </label>
+        <label>
+          <input type="radio" name="search-type" value="people" />
+          <span class="radio-text"><span class="material-icons">people</span> People</span>
+        </label>
+        <label>
+          <input type="radio" name="search-type" value="ituffy" />
+          <span class="radio-text">iTuffy <span class="material-icons">open_in_new</span></span>
+        </label>
+      </fieldset>
+
+
+      <!-- <label for="search-term" id="search-term-label" class="display-inline-block text-size-md m-r-20">Search</label>
+      <input type="text" id="search-term" name="search-term" title="Enter search terms" class="display-inline-block width-75" /> -->
+
+      <div id="site-search-field" class="search-field-container">
+        <div class="gcse-searchbox" data-as_sitesearch="http://news.fullerton.edu" data-gname="sitesearch"></div>
+      </div>
+
+      <div id="csuf-search-field" class="hidden search-field-container">
+        <div class="gcse-searchbox" data-gname="csufsearch"></div>
+      </div>
+
+      <div id="people-search-field" class="hidden search-field-container">
+        <form id="people-search-form" name="people-search-form" class="display-flex">
+          <label for="search-term" id="search-term-label" class="hidden">Search People</label>
+          <input type="text" id="people-search-term" name="people-search-term" title="Enter Name, department, location, or campus phone number" placeholder="Name, department, location, or campus phone number" class="display-block" />
+          <input class="button-rounded medium-blue" type="submit" name="submit" value="Search">
+        </form>
+      </div>
+
+        <!-- <button type="submit" id="search-submit" class="display-inline-block"><span class="material-icons">search</span></button> -->
+
+      <!-- <a href="#" class="button">Quick Links</a> -->
+      <!-- <a href="#" class="button">A-Z Index</a> -->
+    </div>
+    <div class="search-results">
+
+      <div id="site-search-results" class="search-results-container">
+        <div class="gcse-searchresults" data-gname="sitesearch"></div>
+      </div>
+
+      <div id="csuf-search-results" class="search-results-container hidden">
+        <div class="gcse-searchresults" data-gname="csufsearch"></div>
+      </div>
+
+      <div id="people-search-results" class="search-results-container hidden">
+        <!-- <ul id="people-search-results-container"></ul> -->
+      </div>
+
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="//cse.google.com/cse.js?cx=003297517689816257862:da3id2041ie"></script>
+  <script src="./_assets/bundle.js"></script>
+  <noscript style="background-color: white; color: black;">Some page features may require javascript to run.</noscript>
+</body>
+</html>

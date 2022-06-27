@@ -8,12 +8,14 @@ h4, h5, h6 {
 }
 
 h1 {
-	font-size: $text-size-3xl;
-	color: $titan_blue;
+	font-size: $text-size-4xl;
+	color: var(--medium-blue);
+	// font-weight: 500;
 }
 
 h2 {
 	font-size: $text-size-2xl;
+	color: var(--medium-blue);
 }
 
 h3{
@@ -34,12 +36,12 @@ h6 {
 
 p {
 	line-height: 1.5em;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.5rem;
 }
 
 ul,
 ol {
-	margin: 1.5em 0;
+	margin: 0 0 1.5rem 0;
 	padding-left: 2em;
 	ul,
 	ol {
@@ -50,21 +52,83 @@ ol {
 	}
 }
 
+ul.titan-orange {
+	li::marker {
+		color: var(--titan-orange);
+	}
+}
+
+ul.medium-blue {
+	li::marker {
+		color: var(--medium-blue);
+	}
+}
+
+ol.numbered {
+	counter-reset: orderedList;
+	> li {
+		list-style: none;
+		position: relative;
+		margin: .5em 0;
+		&:before {
+			position: absolute;
+			left: -1.75rem;
+			top: 0;
+			counter-increment: orderedList;
+			content: counter(orderedList);
+			display: inline-block;
+			background: var(--text);
+			color: var(--background);
+			border-radius: 50%;
+			width: 1.25rem;
+			height: 1.25rem;
+			text-align: center;
+			line-height: 1.4rem;
+			font-size: $text-size-sm;
+			font-weight: 600;
+		}
+		li {
+			list-style: circle;
+		}
+	}
+	&.medium-blue {
+		> li:before {
+			color: white;
+			background: var(--medium-blue);
+		}
+		li::marker {
+			color: var(--medium-blue);
+		}
+	}
+	&.titan-orange {
+		> li:before {
+			color: $text;
+			background: var(--titan-orange);
+		}
+		li::marker {
+			color: var(--titan-orange);
+		}
+	}
+}
+
 a {
-	color: $medium_blue;
-	text-decoration: none;
-	font-weight: bold;
-	border-bottom: 2px dotted  $medium_blue;
+	color: var(--medium-blue);
+	text-decoration-color: var(--medium-blue);
+	text-decoration-thickness: 2px;
+	text-decoration-style: dotted;
+	font-weight: 700;
+	// border-bottom: 2px dotted  var(--medium-blue);
+	text-underline-offset: 2px;
 	@include transition(all,250ms);
 	&:hover {
 		@include transition(all,250ms);
-		color: $text;
-		border-color: $text;
+		color: var(--text);
+		text-decoration-color: var(--text);
 	}
 	&.link-minimal {
 		font-weight: 400;
-		color: $text;
-		@extend .no-border;
+		color: var(--text);
+		text-decoration: none;
 		&:hover {
 			text-decoration: underline;
 		}
@@ -73,22 +137,22 @@ a {
 
 blockquote {
 	width: 100%;
-	border-top: 3px solid $titan_orange;
-	border-bottom: 3px solid $titan_orange;
+	border-top: 3px solid var(--titan-orange);
+	border-bottom: 3px solid var(--titan-orange);
 	margin: 2rem 0;
 	padding: 2rem 0;
 	font-family: $heading_font;
 	font-weight: 400;
 	font-style: normal;
-	font-size: $text-size-lg;
+	font-size: $text-size-md;
 	line-height: 1.5em;
 	p:last-of-type {
 		margin-bottom: 0;
 	}
 	cite {
-		color: $text;
+		color: var(--text);
 		font-family: $body_font;
-		font-weight: 300;
+		// font-weight: 300;
 		font-size: $text-size-sm;
 		font-style: normal;
 		margin-top: 15px;
@@ -102,16 +166,68 @@ blockquote {
 			top: 0;
 		}
 	}
+	&.pullquote {
+		border-color: var(--text);
+		border-top-width: 2px;
+		position: relative;
+		margin-top: 4rem;
+		padding-top: 4rem;
+		.pullquote-image {
+			background: var(--background);
+			border-radius: 50%;
+			border: 1px solid var(--text);
+			width: 100px;
+			aspect-ratio: 1;
+			object-fit: cover;
+			display: block;
+			margin: 0 auto;
+			top: -50px;
+			left: 50%;
+			transform: translateX(-50%);
+			position: absolute;
+		}
+	}
+}
+
+.info-block {
+	width: 100%;
+	border-top: 3px solid var(--text);
+	border-bottom: 3px solid var(--text);
+	margin: 4rem 0 2rem 0;
+	padding: 4rem 2rem 2rem 2rem;
+	position: relative;
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+	&:before {
+		content: '';
+		background-color: var(--background);
+		background-image: url('./images/fyi-icon.svg');
+		background-size: 70%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 70px;
+		aspect-ratio: 1;
+		display: block;
+		margin: 0 auto;
+		top: -40px;
+		left: 50%;
+		transform: translateX(-50%);
+		position: absolute;
+	}
 }
 
 hr {
 	border: none;
 	border-top: 2px dotted#ccc;
-	margin: 2rem 0;
+	margin: 3.5rem 0;
+	@include darkmode() {
+    border-color: #4e555e;
+  }
 }
 
 :focus {
-	outline: 2px solid $medium_blue;
+	outline: 2px solid var(--medium-blue);
 	outline-offset: 2px;
 }
 
@@ -125,6 +241,9 @@ code {
 	display: inline-block;
 	padding: .1em .35em;
 	font-size: .9em;
+	@include darkmode() {
+		background: #0a0d10;
+	}
 }
 
 .leadin {
@@ -138,4 +257,7 @@ small {
 
 .text-muted {
 	color: #757575;
+	@include darkmode() {
+		color: #8E8E8E;
+	}
 }

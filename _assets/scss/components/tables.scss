@@ -1,10 +1,10 @@
 table {
   border-collapse: collapse;
   margin-bottom: 1.5rem;
+  width: 100%;
   caption {
     font-family: $body_font;
     font-weight: bold;
-    color: $text;
     margin-bottom: 10px;
   }
   th,
@@ -12,16 +12,25 @@ table {
     padding: 0.500em;
     border: 1px solid #ccc;
     line-height: 1.313em;
+    @include darkmode() {
+      border-color: #4e555e;
+    }
   }
   th {
     background-color: #EBEDEE;
     text-align: left;
     font-weight: bold;
+    @include darkmode() {
+      background-color: #3c4148;
+    }
   }
   &.table-striped {
     tr {
       &:nth-child(odd) { 
         background: #ECECEC;
+        @include darkmode() {
+          background: #272f3a;
+        }
       }
     }
   }
@@ -31,6 +40,9 @@ table {
       border: none;
       border-bottom: 1px solid #ccc;
       background: none;
+      @include darkmode() {
+        background: none;
+      }
     }
   }
 }
