@@ -9,6 +9,7 @@ $colors: (
   'sky-blue': var(--sky-blue),
 	'gray': var(--gray),
 	'white': #ffffff,
+	'black': #000000,
 );
 
 @each $name, $color in $colors {
@@ -20,31 +21,40 @@ $colors: (
 	.background-#{$name} {
 		background-color: #{$color};
 		&.opacity-10 {
-			background-color: rgba($color, .1);
+			background-color: #{$color};
+			opacity: .1;
 		}
 		&.opacity-20 {
-			background-color: rgba($color, .2);
+			background-color: #{$color};
+			opacity: .2;
 		}
 		&.opacity-30 {
-			background-color: rgba($color, .3);
+			background-color: #{$color};
+			opacity: .3;
 		}
 		&.opacity-40 {
-			background-color: rgba($color, .4);
+			background-color: #{$color};
+			opacity: .4;
 		}
 		&.opacity-50 {
-			background-color: rgba($color, .5);
+			background-color: #{$color};
+			opacity: .5;
 		}
 		&.opacity-60 {
-			background-color: rgba($color, .6);
+			background-color: #{$color};
+			opacity: .6;
 		}
 		&.opacity-70 {
-			background-color: rgba($color, .7);
+			background-color: #{$color};
+			opacity: .7;
 		}
 		&.opacity-80 {
-			background-color: rgba($color, .8);
+			background-color: #{$color};
+			opacity: .8;
 		}
 		&.opacity-90 {
-			background-color: rgba($color, .9);
+			background-color: #{$color};
+			opacity: .9;
 		}
 	}
 

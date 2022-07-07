@@ -28,6 +28,10 @@
 	font-family: $serif_font;
 }
 
+.text-accent {
+	font-family: $display_font;
+}
+
 $fontWeights: (100, 200, 300, 400, 500, 600, 700, 800, 900);
 
 @each $weight in $fontWeights {

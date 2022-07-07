@@ -17,11 +17,11 @@ $small_wrap_width: 700px;
 // $serif_font:  'kepler-std', serif;
 
 $body_font: 'museo-sans', sans-serif;
-$title_font:  'kepler-std-caption', serif;
 $heading_font: $body_font;
-$sans_serif_font: 'museo-sans', sans-serif;
-$serif_font:  $body_font;
-$display_font: $body_font;
+$sans_serif_font: $body_font;
+$serif_font:  'kepler-std-caption', serif;
+$display_font: 'industry', sans-serif;
+$display_font2: 'industry-inc-inline', sans-serif;
 
 //text size
 $base-font-size: 18px;
@@ -42,7 +42,7 @@ $text: #222;
 // $titan-blue: #00274C;
 $titan-blue: #002F5F;
 $titan-orange: #FF7900;
-$medium-blue: #0C3E8F;
+$medium-blue: #0F3F8C;
 $sky-blue: #EBFBFF;
 $gray: #f5f5f5;
 $beige: #F8F7F3;
@@ -57,11 +57,11 @@ $beige: #F8F7F3;
 
   // fonts
   --body-font: #{$body_font};
-  --title-font: #{$title_font};
   --heading-font: #{$heading_font};
   --sans-serif-font: #{$sans_serif_font};
   --serif-font: #{$serif_font};
   --display-font: #{$display_font};
+  --display-font2: #{$display_font};
 
   //text size
   --text-size-xs: #{$text-size-xs};

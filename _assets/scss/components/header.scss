@@ -143,10 +143,13 @@ header {
 		a,
 		button {
 			font-size: $text-size-sm;
+			vertical-align: baseline;
+			line-height: 1em;
 			&:hover,
 			&:active {
 				text-decoration-color: var(--titan-orange);
 				text-decoration-thickness: 2px;
+				text-underline-offset: 2px;
 			}
 		}
 		#full-menu-toggle {

@@ -1,3 +1,9 @@
+$(document).ready(function() {
+  document.ontouchmove = function(e){
+    e.preventDefault();
+  }
+});
+
 
   $("#open-search-container").click(function (e) { 
     e.preventDefault();
@@ -50,6 +56,10 @@
       $("#gsc-i-id1").attr("placeholder", "Enter search terms");
       $("#gsc-i-id2").attr("placeholder", "Enter search terms");
       $("#gsc-i-id1").focus(); 
+      $("#gsc-i-id1").onfocus = function () {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+      }
 
     }
 
