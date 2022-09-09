@@ -1,10 +1,10 @@
-$('ul.main-nav-list li:has("ul")').addClass('menu-item-has-children');
+$('ul.main-nav-list li:has(ul)').addClass('menu-item-has-children');
 $('li.menu-item-has-children > ul').addClass('sub-menu');
 	
 $(document).ready(function () {
 
   // When interacting with a li that has a sub menu
-	$('ul.main-nav-list li:has("ul")').on('mouseover keyup click mouseleave', function(e) {
+	$('ul.main-nav-list li:has(ul)').on('mouseover keyup click mouseleave', function(e) {
 
 		// If either -
 		// tabbing into the li that has a sub menu

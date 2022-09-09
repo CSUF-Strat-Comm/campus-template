@@ -1,28 +1,32 @@
 $(document).ready(function () {
 
-  // Check for theme cookie
-  if( Cookies.get('theme') ) {
+  if(!$('html').data('disable-theme')) {
 
-    // Use theme cookie value to set theme
-    // console.log('theme cookie set');
-    $('html').attr('data-theme', Cookies.get('theme'));
+    // Check for theme cookie
+    if( Cookies.get('theme') ) {
 
-    if (Cookies.get('theme') === 'dark') {
-      $('#theme-toggle').prop('checked', true);
-    }
+      // Use theme cookie value to set theme
+      // console.log('theme cookie set');
+      $('html').attr('data-theme', Cookies.get('theme'));
 
-  } else {
+      if (Cookies.get('theme') === 'dark') {
+        $('#theme-toggle').prop('checked', true);
+      }
 
-    // console.log('no theme cookie set');
-
-    // no theme cookie set
-    // check for system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      // console.log('dark color scheme')
-      $('#theme-toggle').prop('checked', true);
-      $('html').attr('data-theme', 'dark');
     } else {
-      $('html').attr('data-theme', 'default');
+
+      // console.log('no theme cookie set');
+
+      // no theme cookie set
+      // check for system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // console.log('dark color scheme')
+        $('#theme-toggle').prop('checked', true);
+        $('html').attr('data-theme', 'dark');
+      } else {
+        $('html').attr('data-theme', 'default');
+      }
+
     }
 
   }

@@ -18,6 +18,12 @@ $colors: (
 		color: #{$color};
 	}
 
+	.text-#{$name}-dm {
+		@include darkmode(){
+			color: #{$color};
+		}
+	}
+
 	.background-#{$name} {
 		background-color: #{$color};
 		&.opacity-10 {
@@ -58,6 +64,12 @@ $colors: (
 		}
 	}
 
+	.background-#{$name}-dm {
+		@include darkmode(){
+			background-color: #{$color};
+		}
+	}
+
 	// Wordpress custom color support
 	.has-#{$name}-color {
 		color: #{$color};
@@ -72,10 +84,22 @@ $colors: (
 		border-color: #{$color};
 	}
 
+	.border-#{$name}-dm {
+		@include darkmode(){
+			border-color: #{$color};
+		}
+	}
+
 	$sides: (top, bottom, left, right); // Leave this variable alone
 	@each $side in $sides {
 		.border-#{str-slice($side, 0, 1)}-#{$name} {
 			border-#{$side}-color: #{$color} !important;
+		}
+
+		.border-#{str-slice($side, 0, 1)}-#{$name}-dm {
+			@include darkmode(){
+				border-#{$side}-color: #{$color} !important;
+			}
 		}
 	}
 

@@ -200,6 +200,15 @@ $sides: (top, bottom, left, right); // Leave this variable alone
         .p-#{str-slice($side, 0, 1)}-#{$space} {
             padding-#{$side}: #{$space}px !important;
         }
+
+				@include breakpoint(mobile) {
+					.m-#{str-slice($side, 0, 1)}-#{$space}-sm {
+            margin-#{$side}: #{$space}px !important;
+					}
+					.p-#{str-slice($side, 0, 1)}-#{$space}-sm {
+							padding-#{$side}: #{$space}px !important;
+					}
+				}
     }
 }
 
@@ -215,6 +224,16 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 		padding: #{$space}px !important;
 	}
 
+	@include breakpoint(mobile) {
+		.m-#{$space}-sm {
+			margin: #{$space}px !important;
+		}
+	
+		.p-#{$space}-sm {
+			padding: #{$space}px !important;
+		}
+	}
+
 }
 
 // Widths
@@ -224,6 +243,12 @@ $widthamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80
 
 	.width-#{$width} {
 		width: #{$width}% !important;
+	}
+
+	@include breakpoint(mobile) {
+		.width-#{$width}-sm {
+			width: #{$width}% !important;
+		}
 	}
 
 }
@@ -237,6 +262,12 @@ $heightPixelAmounts: (100, 200, 300, 400, 500, 600, 700, 800, 900);
 		height: #{$height}px !important;
 	}
 
+	@include breakpoint(mobile) {
+		.height-#{$height}-pixels-sm {
+			height: #{$height}px !important;
+		}
+	}
+
 }
 
 $heightViewportAmounts: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
@@ -245,6 +276,12 @@ $heightViewportAmounts: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
 
 	.height-#{$height}-viewport {
 		height: #{$height}vh !important;
+	}
+
+	@include breakpoint(mobile) {
+		.height-#{$height}-viewport-sm {
+			height: #{$height}vh !important;
+		}
 	}
 
 }
