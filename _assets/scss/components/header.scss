@@ -1,5 +1,6 @@
 header {
 	border-top: 5px solid var(--titan-orange);
+	transform: translate3d(0,0,0);
 	// padding-top: .6rem;
 	@include breakpoint(mobile) {
 		// border-top-width: 3px;
@@ -350,11 +351,12 @@ header {
 				border: none;
 			}
 			ul#main-nav-list {
-				li {
-					a {
+				> li {
+					> a {
 						text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
 						&:hover,
-						&:active {
+						&:active,
+						&.active {
 							text-shadow: none;
 						}
 					}
@@ -393,6 +395,7 @@ header {
 	&.header-fixed {
 		position: fixed;
 		z-index: 100;
+		height: 90px;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -400,11 +403,12 @@ header {
 		display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    // transition: all 250ms;
+    // transition: all 100ms;
     flex-wrap: wrap;
 
 		.header-top {
 			border: none;
+			transition: all 100ms;
 		}
 
 		#global-branding {
@@ -413,6 +417,7 @@ header {
 
 		.site-name {
 			font-size: $text-size-lg;
+			transition: all 100ms;
 		}
 
 		#main-nav {
