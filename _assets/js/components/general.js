@@ -12,17 +12,35 @@ $(function () {
   //Get current header class so we can restore it later
   var currentClassNames = $('#site-header').attr('class');
 
+  if ((!$('#site-header').hasClass("header-landing-page")) && !$('#site-header').hasClass("header-homepage")) { 
+    var height = $('#site-header').outerHeight();
+    
+    // only on desktop
+    if ($(window).width() > 767) {
+
+      $('body').css('padding-top', height);
+      $('#site-header').css({
+        "position": "fixed", 
+        "top": "0px",
+        "left": "0px",
+        "width": "100%",
+        "z-index": "100",
+      });
+
+    }
+  }
+
   //Don't fire sticky header on landing pages
   if (!$('#site-header').hasClass("header-landing-page")) { 
     $(window).scroll(function() {
       // trigger sticky header when not in mobile viewport
       if ($(window).width() > 767) {
 
-        if( $(this).scrollTop() > 10 ) {
-          $("#site-header").removeClass(currentClassNames).addClass("header-fixed");
+        if( $(this).scrollTop() > 20 ) {
+          $("#site-header").removeClass(currentClassNames).stop(true, true).addClass("header-fixed");
           setFullMenuHeight();
         } else {
-          $("#site-header").removeClass("header-fixed").addClass(currentClassNames);
+          $("#site-header").removeClass("header-fixed").stop(true, true).addClass(currentClassNames);
           setFullMenuHeight();
         }
   
