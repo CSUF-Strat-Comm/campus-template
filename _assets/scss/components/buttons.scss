@@ -52,27 +52,27 @@
 	}
 
 	//button colors
-	// &.titan-blue,
-	// &.primary {
-	// 	background-color: $titan_blue;
-	// 	color: #fff;
-	// 	border: 1px solid $titan_blue;
-	// 	&:hover,
-	// 	&:focus {
-	// 		background-color: $medium_blue;
-	// 		border: 1px solid $medium_blue;
-	// 	}
-	// 	&.outline {
-	// 		background-color: transparent;
-	// 		color: $titan_blue;
-	// 		border: 1px solid $titan_blue;
-	// 		&:hover,
-	// 		&:focus {
-	// 			background-color: $titan_blue;
-	// 			color: #fff;
-	// 		}
-	// 	}
-	// }
+	&.titan-blue,
+	&.primary {
+		background-color: $titan_blue;
+		color: #fff;
+		border: 1px solid $titan_blue;
+		&:hover,
+		&:focus {
+			background-color: $medium_blue;
+			border: 1px solid $medium_blue;
+		}
+		&.outline {
+			background-color: transparent;
+			color: $titan_blue;
+			border: 1px solid $titan_blue;
+			&:hover,
+			&:focus {
+				background-color: $titan_blue;
+				color: #fff;
+			}
+		}
+	}
 
 	&.medium-blue,
 	&.blue {
