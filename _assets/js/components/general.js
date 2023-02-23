@@ -12,7 +12,7 @@ $(function () {
   //Get current header class so we can restore it later
   var currentClassNames = $('#site-header').attr('class');
 
-  if ((!$('#site-header').hasClass("header-landing-page")) && !$('#site-header').hasClass("header-homepage")) { 
+  if ((!$('#site-header').hasClass("header-landing-page")) && !$('#site-header').hasClass("header-homepage") && !$('#site-header').hasClass("disable-sticky-header")) { 
     var height = $('#site-header').outerHeight();
     
     // only on desktop
@@ -31,7 +31,7 @@ $(function () {
   }
 
   //Don't fire sticky header on landing pages
-  if (!$('#site-header').hasClass("header-landing-page")) { 
+  if (!$('#site-header').hasClass("header-landing-page") && !$('#site-header').hasClass("disable-sticky-header")) { 
     $(window).scroll(function() {
       // trigger sticky header when not in mobile viewport
       if ($(window).width() > 767) {
