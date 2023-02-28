@@ -5,7 +5,7 @@ $(function () {
   });
 
   // Add opens in new window icon to all links with _blank target
-  $("a[target='_blank']").append('&nbsp;<span class="material-icons-outlined text-size-sm" title="Opens in new window">open_in_new</span>');
+  $("a[target='_blank']").append('&nbsp;<span class="material-icons-outlined text-size-sm" aria-label="Opens in new window">open_in_new</span>');
 
   //Sticky Header
   
