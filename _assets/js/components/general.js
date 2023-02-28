@@ -37,7 +37,7 @@ $(function () {
       if ($(window).width() > 767) {
 
         if( $(this).scrollTop() > 20 ) {
-          $("#site-header").removeClass(currentClassNames).stop(true, true).addClass("header-fixed");
+          $("#site-header").removeClass(currentClassNames).stop(true, true).addClass("header-fixed").addClass(currentClassNames);
           setFullMenuHeight();
         } else {
           $("#site-header").removeClass("header-fixed").stop(true, true).addClass(currentClassNames);
