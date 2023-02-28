@@ -53,6 +53,7 @@
     }, 200);
     $('#full-menu').css('transform', 'translateY(0)');
     $("body").addClass("modaal-noscroll");
+    $("#full-menu").find("a:first").focus(); 
   }
 
   function closeFullMenu(tabswitch = false) {
@@ -71,5 +72,6 @@
         $("body").removeClass("screen-tint");
       }
       $('#full-menu-toggle').removeClass('is-active');
+      $("#full-menu-toggle").focus(); 
     });
   }
