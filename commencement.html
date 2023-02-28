@@ -29,7 +29,7 @@
     
     <div class="header-top">
 
-      <a href="http://fullerton.edu/" title="Cal State Fullerton Homepage" id="global-branding"></a>
+      <a href="http://fullerton.edu/" id="global-branding">Cal State Fullerton</a>
 
     </div>
   </header>
@@ -156,11 +156,11 @@
     </section>
 
   </main>
-  <footer id="site-footer">
+  <footer id="site-footer" aria-labelledby="site-footer-header">
     <div class="footer-top-bar"><span class="footer-orange-span"></span></div>
     <div class="container">
 
-      <h2 class="hidden">Site Footer</h2>
+      <h2 id="site-footer-header" class="sr-only">Site Footer</h2>
 
       <div class="row">
         <div class="col-3">
@@ -232,7 +232,7 @@
   </footer>
   <div id="search-container" class="position-fixed hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="search-container-header">
     <div class="search-header">
-      <h2 id="search-container-header" class="hidden">Search</h2>
+      <h2 id="search-container-header" class="sr-only">Search</h2>
       <button id="close-search-container" class="float-right text-size-xs no-border"><span class="material-icons">close</span> Close Window</button>
 
       <fieldset class="display-flex" id="search-type-container">
@@ -269,7 +269,7 @@
 
       <div id="people-search-field" class="hidden search-field-container">
         <form id="people-search-form" name="people-search-form" class="display-flex">
-          <label for="search-term" id="search-term-label" class="hidden">Search People</label>
+          <label for="search-term" id="search-term-label" class="sr-only">Search People</label>
           <input type="text" id="people-search-term" name="people-search-term" title="Enter Name, department, location, or campus phone number" placeholder="Name, department, location, or campus phone number" class="display-block" />
           <input class="button-rounded medium-blue" type="submit" name="submit" value="Search">
         </form>
