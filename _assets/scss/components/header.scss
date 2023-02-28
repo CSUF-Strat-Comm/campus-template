@@ -48,6 +48,7 @@ header {
 		height: 30px;
 		background: url('./images/csuf-wordmark.svg') no-repeat center center;
 		background-size: contain;
+		text-indent: -2000px;
 		@include darkmode() {
 			background-image: url('./images/csuf-wordmark-reversed.svg');
 		}
