@@ -55,10 +55,8 @@ header {
 	}
 
 	.site-branding {
-		margin-bottom: .6rem;
+		padding: .8rem 25px;
 		position: relative;
-		padding-right: 25px;
-		padding-left: 25px;
 		@include breakpoint(mobile) {
 			padding-right: 2.5%;
 			padding-left: 2.5%;
@@ -101,6 +99,20 @@ header {
 		// 		// }
 		// 	}
 		// }
+
+		.org-name {
+			color: #555;
+			font-weight: 900;
+			text-transform: uppercase;
+			text-decoration: none;
+			margin-bottom: 0.5rem;
+			display: block;
+			font-size: 0.6em;
+			letter-spacing: .15em;
+			@include darkmode() {
+				color: #9d9d9d;
+			}
+		}
 	
 		.site-name {
 			font-size: $text-size-xl;
@@ -111,8 +123,8 @@ header {
 			// top: 50%;
 			// transform: translateY(-50%);
 			// position: absolute;
-			margin-top: .9rem;
-			display: inline-block;
+			// margin-top: .9rem;
+			display: block;
 			// -webkit-text-stroke-width: 0.5px;
 			// -webkit-text-stroke-color: var(--titan-blue);
 			// -webkit-text-fill-color: var(--titan-blue);
@@ -397,7 +409,7 @@ header {
 	&.header-fixed {
 		position: fixed;
 		z-index: 100;
-		height: 90px;
+		max-height: 90px;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -415,6 +427,11 @@ header {
 
 		#global-branding {
 			display: none;
+		}
+
+		.org-name {
+			font-size: .5em;
+			transition: all 100ms;
 		}
 
 		.site-name {
