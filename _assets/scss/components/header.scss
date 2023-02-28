@@ -11,21 +11,22 @@ header {
 		}
 	}
 
-	// .header-top-bar {
-	// 	height: 5px;
-	// 	background: $medium_blue;
-	// 	position: relative;
-	// 	overflow: hidden;
-	// 	.header-orange-span {
-	// 		background: $titan_orange;
-	// 		display: block;
-	// 		width: 26%;
-	// 		height: 5px;
-	// 		float: right;
-	// 		transform: skewX(300deg);
-	// 		margin-right: -5px;
-	// 	}
-	// }
+	.header-top-bar {
+		height: 5px;
+		background: $medium_blue;
+		position: relative;
+		overflow: hidden;
+		flex: 0 0 100%;
+		.header-orange-span {
+			background: $titan_orange;
+			display: block;
+			width: 26%;
+			height: 5px;
+			float: right;
+			transform: skewX(300deg);
+			margin-right: -5px;
+		}
+	}
 
 	.header-top {
 		display: flex;
